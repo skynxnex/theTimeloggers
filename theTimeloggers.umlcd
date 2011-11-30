@@ -1,4 +1,544 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_vjW3QBp2EeGI-vspxaR0EQ">
-  <modelElement href="platform:/resource/theTimeloggers/theTimeloggers.uml#_vc_wkBp2EeGI-vspxaR0EQ"/>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/0.9.0" xmi:id="_vjW3QBp2EeGI-vspxaR0EQ">
+  <modelElement href="theTimeloggers.uml#_vc_wkBp2EeGI-vspxaR0EQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Wwi8kBqEEeGI-vspxaR0EQ" sourceAnchor="79.0,290.0" targetAnchor="79.0,0.0">
+    <modelElement href="theTimeloggers.uml#_WwggUBqEEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_Wwi8kRqEEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_Wwi8khqEEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_W0iEsRqEEeGI-vspxaR0EQ" position="4.0,-28.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_j0zdEBqEEeGI-vspxaR0EQ" sourceAnchor="95.0,183.0" targetAnchor="93.0,0.0">
+    <modelElement href="theTimeloggers.uml#_j0xA0BqEEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_j0zdERqEEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_j0zdEhqEEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_j350YBqEEeGI-vspxaR0EQ" position="1.0,-6.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_qWCVcBqEEeGI-vspxaR0EQ" sourceAnchor="135.0,0.0" targetAnchor="135.0,290.0">
+    <modelElement href="theTimeloggers.uml#_qV_5MBqEEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_qWCVcRqEEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_qWCVchqEEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_qZIFsBqEEeGI-vspxaR0EQ" position="4.0,-24.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_rM2osBqEEeGI-vspxaR0EQ" sourceAnchor="77.0,0.0" targetAnchor="79.0,183.0">
+    <modelElement href="theTimeloggers.uml#_rM0McBqEEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_rM2osRqEEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_rM2oshqEEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_rPVU8BqEEeGI-vspxaR0EQ" position="-24.0,7.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_VcZiMBqGEeGI-vspxaR0EQ" sourceAnchor="0.0,72.0" targetAnchor="244.0,106.0" dashed="true" subClass="_eV8SkBqCEeGI-vspxaR0EQ" superClass="_YaZhMRqCEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_VcYUEBqGEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_VcZiMRqGEeGI-vspxaR0EQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_CcDBQBqHEeGI-vspxaR0EQ" sourceAnchor="31.0,0.0" targetAnchor="157.0,102.0">
+    <modelElement href="theTimeloggers.uml#_Cb_98BqHEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_CcDBQRqHEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_CcDBQhqHEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_CfevwBqHEeGI-vspxaR0EQ" position="2.0,5.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WznGUhtCEeGWwMQJTcCviQ" sourceX="-8" sourceY="-28" targetX="54"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_C7CDUBqHEeGI-vspxaR0EQ" sourceAnchor="0.0,23.0" targetAnchor="160.0,162.0">
+    <modelElement href="theTimeloggers.uml#_C6_nEBqHEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_C7CDURqHEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_C7CDUhqHEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_C-N6MBqHEeGI-vspxaR0EQ" position="-9.0,27.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ConnectionVisual" xmi:id="_VFgccBqXEeGI-vspxaR0EQ" sourceAnchor="0.0,25.0" targetAnchor="142.0,24.0" sourceItem="_VFfOUBqXEeGI-vspxaR0EQ" targetItem="_l2c2oRqCEeGI-vspxaR0EQ"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_6-K1QBqYEeGI-vspxaR0EQ" sourceAnchor="135.0,0.0" targetAnchor="0.0,105.0">
+    <modelElement href="theTimeloggers.uml#_6-EHkBqYEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_6-K1QRqYEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_6-K1QhqYEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_7FlE0BqYEeGI-vspxaR0EQ" position="21.0,17.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzlRJRtCEeGWwMQJTcCviQ" sourceX="-17" sourceY="146" targetX="-606" targetY="42"/>
+    <bendpoints xmi:id="_Wzl4MBtCEeGWwMQJTcCviQ" sourceX="528" sourceY="219" targetX="-61" targetY="115"/>
+    <bendpoints xmi:id="_Wzl4MRtCEeGWwMQJTcCviQ" sourceX="534" sourceY="104" targetX="-55"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_7ZQOwBqYEeGI-vspxaR0EQ" sourceAnchor="0.0,85.0" targetAnchor="171.0,0.0">
+    <modelElement href="theTimeloggers.uml#_7ZNygBqYEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_7ZQOwRqYEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_7ZQOwhqYEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_7e_DUBqYEeGI-vspxaR0EQ" position="-235.0,2.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzi05RtCEeGWwMQJTcCviQ" sourceX="-92" targetX="461" targetY="84"/>
+    <bendpoints xmi:id="_Wzjb8BtCEeGWwMQJTcCviQ" sourceX="-93" sourceY="126" targetX="460" targetY="210"/>
+    <bendpoints xmi:id="_Wzjb8RtCEeGWwMQJTcCviQ" sourceX="-560" sourceY="60" targetX="-7" targetY="144"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_x5fTQBqZEeGI-vspxaR0EQ" sourceAnchor="131.0,0.0" targetAnchor="0.0,148.0">
+    <modelElement href="theTimeloggers.uml#_x5c3ABqZEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_x5fTQRqZEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_x5fTQhqZEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_x_bjMRqZEeGI-vspxaR0EQ" position="170.0,-5.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzl4MhtCEeGWwMQJTcCviQ" sourceX="-7" sourceY="-100" targetX="-332" targetY="-12"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_yK9dwBqZEeGI-vspxaR0EQ" sourceAnchor="0.0,108.0" targetAnchor="103.0,0.0">
+    <modelElement href="theTimeloggers.uml#_yK7okBqZEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_yK9dwRqZEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_yK9dwhqZEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_y854EBqZEeGI-vspxaR0EQ" position="-16.999999999999943,46.000000000000114"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzdVUBtCEeGWwMQJTcCviQ" sourceX="-358" sourceY="-12" targetX="-5" targetY="-140"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_QUcZ0BqaEeGI-vspxaR0EQ" sourceAnchor="53.0,194.0" targetAnchor="53.0,0.0">
+    <modelElement href="theTimeloggers.uml#_QUakoBqaEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_QUcZ0RqaEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_QUcZ0hqaEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_QaG88BqaEeGI-vspxaR0EQ" position="2.0,-7.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_SpIZQBqaEeGI-vspxaR0EQ" sourceAnchor="22.0,0.0" targetAnchor="22.0,194.0">
+    <modelElement href="theTimeloggers.uml#_SpF9ABqaEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_SpIZQRqaEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_SpIZQhqaEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_Sun9QBqaEeGI-vspxaR0EQ" position="2.0,-7.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_K1CqgBqdEeGI-vspxaR0EQ" sourceAnchor="79.0,0.0" targetAnchor="285.0,159.0" dashed="true" subClass="_EJk4ERqdEeGI-vspxaR0EQ" superClass="_zA2IcBqPEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_K1CDcBqdEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_K1CqgRqdEeGI-vspxaR0EQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_shbQIBqeEeGI-vspxaR0EQ" sourceAnchor="0.0,24.0" targetAnchor="147.0,86.0" enclosingItem="_IOfJ4RqbEeGI-vspxaR0EQ">
+    <bendpoints xmi:id="_Wzd8ZxtCEeGWwMQJTcCviQ" sourceX="-10" targetX="188" targetY="426"/>
+    <bendpoints xmi:id="_Wzd8aBtCEeGWwMQJTcCviQ" sourceX="-10" sourceY="-60" targetX="188" targetY="366"/>
+    <bendpoints xmi:id="_WzejcBtCEeGWwMQJTcCviQ" sourceX="-197" sourceY="-59" targetX="1" targetY="367"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_ESLvkBqfEeGI-vspxaR0EQ" sourceAnchor="96.0,0.0" targetAnchor="169.0,70.0" enclosingItem="_0JZHERqeEeGI-vspxaR0EQ">
+    <bendpoints xmi:id="_WziN0BtCEeGWwMQJTcCviQ" sourceY="-30" targetX="-120" targetY="240"/>
+    <bendpoints xmi:id="_WziN0RtCEeGWwMQJTcCviQ" sourceX="120" sourceY="-30" targetY="240"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_jCVDABqfEeGI-vspxaR0EQ" sourceAnchor="175.0,76.0" targetAnchor="154.0,66.0" enclosingItem="_K6fgURqfEeGI-vspxaR0EQ">
+    <bendpoints xmi:id="_Wzd8YBtCEeGWwMQJTcCviQ" sourceX="25" targetX="-570" targetY="349"/>
+    <bendpoints xmi:id="_Wzd8YRtCEeGWwMQJTcCviQ" sourceX="25" sourceY="-472" targetX="-570" targetY="-123"/>
+    <bendpoints xmi:id="_Wzd8YhtCEeGWwMQJTcCviQ" sourceX="795" sourceY="-472" targetX="200" targetY="-123"/>
+    <bendpoints xmi:id="_Wzd8YxtCEeGWwMQJTcCviQ" sourceX="795" sourceY="-108" targetX="200" targetY="241"/>
+    <bendpoints xmi:id="_Wzd8ZBtCEeGWwMQJTcCviQ" sourceX="595" sourceY="-108" targetY="241"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_dV4BEBqgEeGI-vspxaR0EQ" sourceAnchor="90.0,0.0" targetAnchor="164.0,82.0" enclosingItem="_IOfJ4RqbEeGI-vspxaR0EQ">
+    <bendpoints xmi:id="_eOZQkBq4EeGXlbKn650uTQ" sourceY="-320" targetX="830" targetY="377"/>
+    <bendpoints xmi:id="_eOZQkRq4EeGXlbKn650uTQ" sourceX="-830" sourceY="-320" targetY="377"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Icj98BqiEeGI-vspxaR0EQ" sourceAnchor="0.0,43.0" targetAnchor="106.0,0.0">
+    <modelElement href="theTimeloggers.uml#_IciIwBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_Icj98RqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_Icj98hqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_Ihx1IBqiEeGI-vspxaR0EQ" position="-77.00000000000011,-5.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzt0BhtCEeGWwMQJTcCviQ" sourceX="74" sourceY="-11" targetX="179" targetY="783"/>
+    <bendpoints xmi:id="_Wzt0BxtCEeGWwMQJTcCviQ" sourceX="179" sourceY="-838" targetX="284" targetY="-44"/>
+    <bendpoints xmi:id="_Wzt0CBtCEeGWwMQJTcCviQ" sourceX="-105" sourceY="-833" targetY="-39"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_IrIlcBqiEeGI-vspxaR0EQ" sourceAnchor="74.0,0.0" targetAnchor="46.0,153.0">
+    <modelElement href="theTimeloggers.uml#_IrGwQBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_IrIlcRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_IrIlchqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_IwltMBqiEeGI-vspxaR0EQ" position="1336.0,13.000000000000455"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzjb8htCEeGWwMQJTcCviQ" sourceY="-39" targetX="-184" targetY="-943"/>
+    <bendpoints xmi:id="_Wzjb8xtCEeGWwMQJTcCviQ" sourceX="-577" sourceY="-42" targetX="-761" targetY="-946"/>
+    <bendpoints xmi:id="_Wzjb9BtCEeGWwMQJTcCviQ" sourceX="-577" sourceY="-773" targetX="-761" targetY="-1677"/>
+    <bendpoints xmi:id="_Wzjb9RtCEeGWwMQJTcCviQ" sourceX="2209" sourceY="-802" targetX="2025" targetY="-1706"/>
+    <bendpoints xmi:id="_Wzjb9htCEeGWwMQJTcCviQ" sourceX="2209" sourceY="1172" targetX="2025" targetY="268"/>
+    <bendpoints xmi:id="_Wzjb9xtCEeGWwMQJTcCviQ" sourceX="185" sourceY="1176" targetX="1" targetY="272"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Jsc4gBqiEeGI-vspxaR0EQ" sourceAnchor="14.0,153.0" targetAnchor="21.0,0.0">
+    <modelElement href="theTimeloggers.uml#_JsbDUBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_JsdfkBqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_JsdfkRqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_Jxiz4RqiEeGI-vspxaR0EQ" position="2.0,7.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_J8EB0BqiEeGI-vspxaR0EQ" sourceAnchor="21.0,0.0" targetAnchor="14.0,153.0">
+    <modelElement href="theTimeloggers.uml#_J8CMoBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_J8EB0RqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_J8EB0hqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_KBFEsBqiEeGI-vspxaR0EQ" position="2.0,-11.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Kxz-EBqiEeGI-vspxaR0EQ" sourceAnchor="144.0,122.0" targetAnchor="0.0,151.0">
+    <modelElement href="theTimeloggers.uml#_Kxxh0BqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_Kxz-ERqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_Kxz-EhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_K3d6IRqiEeGI-vspxaR0EQ" position="-202.0,-15.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzqJqBtCEeGWwMQJTcCviQ" sourceX="275" sourceY="11" targetX="-2" targetY="-5"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_LA90YBqiEeGI-vspxaR0EQ" sourceAnchor="0.0,87.0" targetAnchor="144.0,74.0">
+    <modelElement href="theTimeloggers.uml#_LA7YIBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_LA90YRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_LA90YhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_LGRyMRqiEeGI-vspxaR0EQ" position="-8.0,-14.999999999999915"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_MCUjsBqiEeGI-vspxaR0EQ" sourceAnchor="96.0,0.0" targetAnchor="71.0,188.0">
+    <modelElement href="theTimeloggers.uml#_MCSHcBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_MCUjsRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_MCUjshqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_MHn6cBqiEeGI-vspxaR0EQ" position="-38.99999999999997,10.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzqwsBtCEeGWwMQJTcCviQ" sourceY="-198" targetX="-168" targetY="142"/>
+    <bendpoints xmi:id="_WzqwsRtCEeGWwMQJTcCviQ" sourceX="162" sourceY="-370" targetX="-6" targetY="-30"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_MUTEgBqiEeGI-vspxaR0EQ" sourceAnchor="0.0,123.0" targetAnchor="36.0,0.0">
+    <modelElement href="theTimeloggers.uml#_MURPUBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_MUTEgRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_MUTEghqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_M_WzsBqiEeGI-vspxaR0EQ" position="13.999999999999943,192.99999999999994"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzkDBhtCEeGWwMQJTcCviQ" sourceX="-168" sourceY="-9" targetX="-12" targetY="-414"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_NRFc4BqiEeGI-vspxaR0EQ" sourceAnchor="43.0,0.0" targetAnchor="26.0,179.0">
+    <modelElement href="theTimeloggers.uml#_NQ-IIBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_NRFc4RqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_NRFc4hqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_NWceABqiEeGI-vspxaR0EQ" position="2.0,-6.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Ne_9EBqiEeGI-vspxaR0EQ" sourceAnchor="50.0,179.0" targetAnchor="67.0,0.0">
+    <modelElement href="theTimeloggers.uml#_Ne9g0BqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_Ne_9ERqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_Ne_9EhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_Nk80EBqiEeGI-vspxaR0EQ" position="2.0,-10.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_jB6r8BqiEeGI-vspxaR0EQ" sourceAnchor="53.0,168.0" targetAnchor="81.0,196.0">
+    <modelElement href="theTimeloggers.uml#_jB42wBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_jB6r8RqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_jB6r8hqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_jIEXQBqiEeGI-vspxaR0EQ" position="-29.0,-15.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WztM8xtCEeGWwMQJTcCviQ" sourceY="124" targetX="484" targetY="99"/>
+    <bendpoints xmi:id="_WztM9BtCEeGWwMQJTcCviQ" sourceX="-483" sourceY="124" targetX="1" targetY="99"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_jVwN8BqiEeGI-vspxaR0EQ" sourceAnchor="82.0,0.0" targetAnchor="0.0,51.0">
+    <modelElement href="theTimeloggers.uml#_jVuYwBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_jVw1ABqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_jVw1ARqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_kBM-sBqiEeGI-vspxaR0EQ" position="1.0,62.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzsl4BtCEeGWwMQJTcCviQ" sourceY="-60" targetX="-429" targetY="-115"/>
+    <bendpoints xmi:id="_Wzsl4RtCEeGWwMQJTcCviQ" sourceX="302" sourceY="-60" targetX="-127" targetY="-115"/>
+    <bendpoints xmi:id="_Wzsl4htCEeGWwMQJTcCviQ" sourceX="302" sourceY="55" targetX="-127"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_j-BH0BqiEeGI-vspxaR0EQ" sourceAnchor="41.0,0.0" targetAnchor="40.0,147.0">
+    <modelElement href="theTimeloggers.uml#_j9-rkBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_j-BH0RqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_j-BH0hqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_kVE88BqiEeGI-vspxaR0EQ" position="-18.0,11.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_kRyYYBqiEeGI-vspxaR0EQ" sourceAnchor="16.0,147.0" targetAnchor="17.0,0.0">
+    <modelElement href="theTimeloggers.uml#_kRwjMBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_kRyYYRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_kRyYYhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_lvsg0BqiEeGI-vspxaR0EQ" position="2.0,30.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="__fHsYBqiEeGI-vspxaR0EQ" sourceAnchor="0.0,77.0" targetAnchor="172.0,108.0">
+    <modelElement href="theTimeloggers.uml#__fFQIBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="__fHsYRqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="__fHsYhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="__mYyABqiEeGI-vspxaR0EQ" position="-8.0,-2.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzo7iRtCEeGWwMQJTcCviQ" sourceX="-33" targetX="149" targetY="136"/>
+    <bendpoints xmi:id="_Wzo7ihtCEeGWwMQJTcCviQ" sourceX="-50" sourceY="-136" targetX="132"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="__xX6ABqiEeGI-vspxaR0EQ" sourceAnchor="172.0,92.0" targetAnchor="0.0,49.0">
+    <modelElement href="theTimeloggers.uml#__xQlQBqiEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="__xX6ARqiEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="__xX6AhqiEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_APW2gRqjEeGI-vspxaR0EQ" position="2.0,-40.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzoUcBtCEeGWwMQJTcCviQ" sourceX="146" sourceY="1" targetX="-36" targetY="-123"/>
+    <bendpoints xmi:id="_WzoUcRtCEeGWwMQJTcCviQ" sourceX="163" sourceY="124" targetX="-19"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_ALBJEBqjEeGI-vspxaR0EQ" sourceAnchor="50.0,160.0" targetAnchor="0.0,239.0">
+    <modelElement href="theTimeloggers.uml#_AK_T4BqjEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_ALBwIBqjEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_ALBwIRqjEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_AYUlQRqjEeGI-vspxaR0EQ" position="2.0,-154.00000000000009"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzoUchtCEeGWwMQJTcCviQ" sourceY="62" targetX="420" targetY="330"/>
+    <bendpoints xmi:id="_WzoUcxtCEeGWwMQJTcCviQ" sourceX="-449" sourceY="88" targetX="-29" targetY="356"/>
+    <bendpoints xmi:id="_WzoUdBtCEeGWwMQJTcCviQ" sourceX="-445" sourceY="-268" targetX="-25"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_AfQ6wBqjEeGI-vspxaR0EQ" sourceAnchor="0.0,139.0" targetAnchor="172.0,104.0">
+    <modelElement href="theTimeloggers.uml#_AfOegBqjEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_AfQ6wRqjEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_AfQ6whqjEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_BOf_UBqjEeGI-vspxaR0EQ" position="-7.0,879.0"/>
+    </nameVisual>
+    <bendpoints xmi:id="_Wzl4MxtCEeGWwMQJTcCviQ" sourceX="-585" targetX="-1127" targetY="-312"/>
+    <bendpoints xmi:id="_Wzl4NBtCEeGWwMQJTcCviQ" sourceX="-595" sourceY="2219" targetX="-1137" targetY="1907"/>
+    <bendpoints xmi:id="_Wzl4NRtCEeGWwMQJTcCviQ" sourceX="3850" sourceY="2219" targetX="3308" targetY="1907"/>
+    <bendpoints xmi:id="_Wzl4NhtCEeGWwMQJTcCviQ" sourceX="3851" sourceY="354" targetX="3309" targetY="42"/>
+    <bendpoints xmi:id="_Wzl4NxtCEeGWwMQJTcCviQ" sourceX="707" sourceY="354" targetX="165" targetY="42"/>
+    <bendpoints xmi:id="_Wzl4OBtCEeGWwMQJTcCviQ" sourceX="711" sourceY="313" targetX="169" targetY="1"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_A7EtABqjEeGI-vspxaR0EQ" sourceAnchor="162.0,160.0" targetAnchor="16.0,0.0">
+    <modelElement href="theTimeloggers.uml#_A7C30BqjEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_A7EtARqjEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_A7EtAhqjEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_Cc5FERqjEeGI-vspxaR0EQ" position="-23.000000000000014,-28.0"/>
+    </nameVisual>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_BXQSsBqjEeGI-vspxaR0EQ" sourceAnchor="0.0,54.0" targetAnchor="82.0,160.0">
+    <modelElement href="theTimeloggers.uml#_BXOdgBqjEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_BXQSsRqjEeGI-vspxaR0EQ"/>
+    <nameVisual xmi:id="_BXQSshqjEeGI-vspxaR0EQ" text="">
+      <visualProperties xmi:id="_DmlRABqjEeGI-vspxaR0EQ" position="-68.00000000000003,-166.99999999999994"/>
+    </nameVisual>
+    <bendpoints xmi:id="_WzqwshtCEeGWwMQJTcCviQ" sourceX="-61" sourceY="-32" targetX="3" targetY="276"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_nfBEMBq0EeGKxP_NiyvTUQ" sourceAnchor="0.0,37.0" targetAnchor="169.0,70.0" enclosingItem="_0JZHERqeEeGI-vspxaR0EQ">
+    <bendpoints xmi:id="_c8Js8hq1EeGKxP_NiyvTUQ" sourceX="-143" targetX="-569" targetY="724"/>
+    <bendpoints xmi:id="_c8Js8xq1EeGKxP_NiyvTUQ" sourceX="-143" sourceY="-637" targetX="-569" targetY="87"/>
+    <bendpoints xmi:id="_c8Js9Bq1EeGKxP_NiyvTUQ" sourceX="426" sourceY="-637" targetY="87"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_wUnPEBq4EeGXlbKn650uTQ" sourceAnchor="94.0,0.0" targetAnchor="103.0,86.0" dashed="true" subClass="_rpAbkBq4EeGXlbKn650uTQ">
+    <modelElement href="theTimeloggers.uml#_wUmoABq4EeGXlbKn650uTQ"/>
+    <visualProperties xmi:id="_wUnPERq4EeGXlbKn650uTQ"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_NE91ABq5EeGXlbKn650uTQ" sourceAnchor="200.0,32.0" targetAnchor="0.0,62.0" subClass="_rpAbkBq4EeGXlbKn650uTQ" superClass="_89aDwBqFEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_NE9N8Bq5EeGXlbKn650uTQ"/>
+    <visualProperties xmi:id="_NE91ARq5EeGXlbKn650uTQ"/>
+    <bendpoints xmi:id="_WzZq9RtCEeGWwMQJTcCviQ" sourceX="183" sourceY="1" targetX="-419" targetY="389"/>
+    <bendpoints xmi:id="_WzaSABtCEeGWwMQJTcCviQ" sourceX="193" sourceY="-388" targetX="-409"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_YL3p0BsuEeGIAYVm6HMqVQ" sourceAnchor="0.0,88.0" targetAnchor="169.0,95.0" source="_l2c2oRqCEeGI-vspxaR0EQ" target="_EJk4ERqdEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_YL1NkBsuEeGIAYVm6HMqVQ"/>
+    <visualProperties xmi:id="_YL3p0RsuEeGIAYVm6HMqVQ"/>
+    <nameVisual xmi:id="_YL3p0hsuEeGIAYVm6HMqVQ" text="">
+      <visualProperties xmi:id="_YR3kIBsuEeGIAYVm6HMqVQ" position="38.0,-15.0"/>
+    </nameVisual>
+    <sourceRole xmi:id="_YL3p0xsuEeGIAYVm6HMqVQ" name="serverEngine">
+      <modelElement href="theTimeloggers.uml#_YL1NkRsuEeGIAYVm6HMqVQ"/>
+      <visualProperties xmi:id="_YR29EBsuEeGIAYVm6HMqVQ" position="-142.0,-33.0"/>
+      <visibility xmi:id="_YL3p1BsuEeGIAYVm6HMqVQ" label="+"/>
+      <cardinality xmi:id="_YL3p1RsuEeGIAYVm6HMqVQ" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_YL3p1hsuEeGIAYVm6HMqVQ" name="securityLayerImpl" navigable="true">
+      <modelElement href="theTimeloggers.uml#_YL10oRsuEeGIAYVm6HMqVQ"/>
+      <visualProperties xmi:id="_YR3kIRsuEeGIAYVm6HMqVQ" position="19.0,7.0"/>
+      <visibility xmi:id="_YL3p1xsuEeGIAYVm6HMqVQ" label="+"/>
+      <cardinality xmi:id="_YL3p2BsuEeGIAYVm6HMqVQ" label="*" max="-1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_iFkdYBsvEeGIAYVm6HMqVQ" sourceAnchor="52.0,54.0" targetAnchor="39.0,79.0">
+    <bendpoints xmi:id="_yFntshs8EeGWwMQJTcCviQ" sourceY="132" targetX="-441" targetY="208"/>
+    <bendpoints xmi:id="_yFntsxs8EeGWwMQJTcCviQ" sourceX="441" sourceY="132" targetY="208"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_ictLABsvEeGIAYVm6HMqVQ" sourceAnchor="46.0,16.0" targetAnchor="78.0,15.0">
+    <bendpoints xmi:id="_yFfx4Rs8EeGWwMQJTcCviQ" sourceY="-39" targetX="80" targetY="-44"/>
+    <bendpoints xmi:id="_yFfx4hs8EeGWwMQJTcCviQ" sourceX="-80" sourceY="-51" targetY="-56"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_jH9HcBsvEeGIAYVm6HMqVQ" sourceAnchor="46.0,15.0" targetAnchor="41.0,16.0">
+    <bendpoints xmi:id="_yFfx4xs8EeGWwMQJTcCviQ" sourceY="-86" targetX="96" targetY="-85"/>
+    <bendpoints xmi:id="_yFfx5Bs8EeGWwMQJTcCviQ" sourceX="-96" sourceY="-74" targetY="-73"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_kzVrMBsvEeGIAYVm6HMqVQ" sourceAnchor="41.0,68.0" targetAnchor="41.0,58.0">
+    <bendpoints xmi:id="_yFgY8Bs8EeGWwMQJTcCviQ" sourceY="21" targetX="96" targetY="20"/>
+    <bendpoints xmi:id="_yFgY8Rs8EeGWwMQJTcCviQ" sourceX="-96" sourceY="10" targetY="9"/>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:ContainmentVisual" xmi:id="_mUoe0BsvEeGIAYVm6HMqVQ" sourceAnchor="41.0,15.0" targetAnchor="45.0,16.0">
+    <bendpoints xmi:id="_yFnGpxs8EeGWwMQJTcCviQ" sourceY="-125" targetX="104" targetY="-103"/>
+    <bendpoints xmi:id="_yFntsBs8EeGWwMQJTcCviQ" sourceX="-104" sourceY="-113" targetY="-91"/>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_zA2IcBqPEeGI-vspxaR0EQ" name="SecurityLayer" subclassedBy="_K1CqgBqdEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_zA1hYBqPEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_zA2IcRqPEeGI-vspxaR0EQ" position="1583.0,-676.0" size="316.0,159.0"/>
+    <visibility xmi:id="_zA2IchqPEeGI-vspxaR0EQ" label="+"/>
+    <operations xmi:id="_AatFgBqQEeGI-vspxaR0EQ" name="getSession">
+      <modelElement href="theTimeloggers.uml#_Aar3YBqQEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_AatFgRqQEeGI-vspxaR0EQ" label="+"/>
+      <outParameters xmi:id="_AatFghqQEeGI-vspxaR0EQ">
+        <modelElement href="theTimeloggers.uml#_Aar3YRqQEeGI-vspxaR0EQ"/>
+        <type xmi:id="_AatFgxqQEeGI-vspxaR0EQ" name="PublicInterface">
+          <modelElement href="theTimeloggers.uml#_YaZhMBqCEeGI-vspxaR0EQ"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_AatFhBqQEeGI-vspxaR0EQ" name="UUID">
+        <modelElement href="theTimeloggers.uml#_Aar3YhqQEeGI-vspxaR0EQ"/>
+        <type xmi:id="_AatFhRqQEeGI-vspxaR0EQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_kzEIMBqcEeGI-vspxaR0EQ" name="createSession">
+      <modelElement href="theTimeloggers.uml#_kzC6ERqcEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_kzEIMRqcEeGI-vspxaR0EQ" label="+"/>
+      <outParameters xmi:id="_kzEIMhqcEeGI-vspxaR0EQ">
+        <modelElement href="theTimeloggers.uml#_kzC6EhqcEeGI-vspxaR0EQ"/>
+        <type xmi:id="_kzEIMxqcEeGI-vspxaR0EQ" name="UUID">
+          <modelElement href="theTimeloggers.uml#_kzCTABqcEeGI-vspxaR0EQ"/>
+        </type>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_1AN_MBqPEeGI-vspxaR0EQ" name="Session">
+    <modelElement href="theTimeloggers.uml#_1ANYIBqPEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_1AN_MRqPEeGI-vspxaR0EQ" position="1580.0,-434.0" size="160.0,163.0"/>
+    <visibility xmi:id="_1AN_MhqPEeGI-vspxaR0EQ" label="+"/>
+    <attributes xmi:id="_3Edu4RqPEeGI-vspxaR0EQ" name="UUID">
+      <modelElement href="theTimeloggers.uml#_3Edu4BqPEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_3Edu4hqPEeGI-vspxaR0EQ" label="+"/>
+      <cardinality xmi:id="_3Edu4xqPEeGI-vspxaR0EQ" label="1" max="1" min="1"/>
+      <type xmi:id="_3Edu5BqPEeGI-vspxaR0EQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_5J6YcBqPEeGI-vspxaR0EQ" name="userId">
+      <modelElement href="theTimeloggers.uml#_5J5xYBqPEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_5J6YcRqPEeGI-vspxaR0EQ" label="+"/>
+      <cardinality xmi:id="_5J6YchqPEeGI-vspxaR0EQ" label="1" max="1" min="1"/>
+      <type xmi:id="_5J6YcxqPEeGI-vspxaR0EQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_6xbv4BqPEeGI-vspxaR0EQ" name="clientId">
+      <modelElement href="theTimeloggers.uml#_6xbI0BqPEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_6xbv4RqPEeGI-vspxaR0EQ" label="+"/>
+      <cardinality xmi:id="_6xbv4hqPEeGI-vspxaR0EQ" label="1" max="1" min="1"/>
+      <type xmi:id="_6xbv4xqPEeGI-vspxaR0EQ" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_0AQrIRqcEeGI-vspxaR0EQ" name="publicInterface">
+      <modelElement href="theTimeloggers.uml#_0AQrIBqcEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_0AQrIhqcEeGI-vspxaR0EQ" label="+"/>
+      <cardinality xmi:id="_0AQrIxqcEeGI-vspxaR0EQ" label="1" max="1" min="1"/>
+      <type xmi:id="_0AQrJBqcEeGI-vspxaR0EQ" name="PublicInterface">
+        <modelElement href="theTimeloggers.uml#_YaZhMBqCEeGI-vspxaR0EQ"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_YaZhMRqCEeGI-vspxaR0EQ" name="PublicInterface" subclassedBy="_VcZiMBqGEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_YaZhMBqCEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_YaZhMhqCEeGI-vspxaR0EQ" position="1544.0,-226.0" size="244.0,215.0"/>
+    <visibility xmi:id="_YaZhMxqCEeGI-vspxaR0EQ" label="+"/>
+    <operations xmi:id="_xwJAcBqNEeGI-vspxaR0EQ" name="getUserDAO">
+      <modelElement href="theTimeloggers.uml#_xwIZYBqNEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_xwJAcRqNEeGI-vspxaR0EQ" label="+"/>
+      <outParameters xmi:id="_xwJAchqNEeGI-vspxaR0EQ">
+        <modelElement href="theTimeloggers.uml#_xwIZYRqNEeGI-vspxaR0EQ"/>
+        <type xmi:id="_Mkm5wRqUEeGI-vspxaR0EQ" name="UserDAO">
+          <modelElement href="theTimeloggers.uml#_MkmSsBqUEeGI-vspxaR0EQ"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_LjNHIBqUEeGI-vspxaR0EQ" name="getUserInfoDAO">
+      <modelElement href="theTimeloggers.uml#_LjMgEBqUEeGI-vspxaR0EQ"/>
+      <visibility xmi:id="_LjNHIRqUEeGI-vspxaR0EQ" label="+"/>
+      <outParameters xmi:id="_LjNHIhqUEeGI-vspxaR0EQ">
+        <modelElement href="theTimeloggers.uml#_LjMgERqUEeGI-vspxaR0EQ"/>
+      </outParameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_rpAbkBq4EeGXlbKn650uTQ" name="ProjetAdminLevelDAOImpl" generalizations="_wUnPEBq4EeGXlbKn650uTQ _NE91ABq5EeGXlbKn650uTQ">
+    <modelElement href="theTimeloggers.uml#_ro_0gBq4EeGXlbKn650uTQ"/>
+    <visualProperties xmi:id="_rpAbkRq4EeGXlbKn650uTQ" position="498.0,-52.0" size="200.0,69.0"/>
+    <visibility xmi:id="_rpAbkhq4EeGXlbKn650uTQ" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_89aDwBqFEeGI-vspxaR0EQ" name="DB" subclassedBy="_NE91ABq5EeGXlbKn650uTQ">
+    <modelElement href="theTimeloggers.uml#_89ZcsBqFEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_89aDwRqFEeGI-vspxaR0EQ" position="1300.0,-470.0" size="164.0,136.0"/>
+    <visibility xmi:id="_89aDwhqFEeGI-vspxaR0EQ" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_l2c2oRqCEeGI-vspxaR0EQ" comments="_VFfOUBqXEeGI-vspxaR0EQ" targetConnectionVisual="_VFgccBqXEeGI-vspxaR0EQ" name="ServerEngine" associationsOut="_YL3p0BsuEeGIAYVm6HMqVQ">
+    <modelElement href="theTimeloggers.uml#_l2c2oBqCEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_l2c2ohqCEeGI-vspxaR0EQ" position="2113.0,-444.0" size="142.0,178.0"/>
+    <visibility xmi:id="_l2c2oxqCEeGI-vspxaR0EQ" label="+"/>
+    <attributes xmi:id="_YL4Q4BsuEeGIAYVm6HMqVQ" name="securityLayerImpl">
+      <modelElement href="theTimeloggers.uml#_YL10oRsuEeGIAYVm6HMqVQ"/>
+      <visibility xmi:id="_YL4Q4RsuEeGIAYVm6HMqVQ" label="+"/>
+      <cardinality xmi:id="_YL4Q4hsuEeGIAYVm6HMqVQ" label="*" max="-1"/>
+      <type xmi:id="_YL4Q4xsuEeGIAYVm6HMqVQ" name="SecurityLayerImpl">
+        <modelElement href="theTimeloggers.uml#_EJk4EBqdEeGI-vspxaR0EQ"/>
+      </type>
+    </attributes>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:CommentVisual" xmi:id="_VFfOUBqXEeGI-vspxaR0EQ" item="_l2c2oRqCEeGI-vspxaR0EQ" sourceConnectionVisual="_VFgccBqXEeGI-vspxaR0EQ" text="Själva servern där allt snurrar">
+    <modelElement href="theTimeloggers.uml#_VFf1YBqXEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_VFfOURqXEeGI-vspxaR0EQ" position="2266.0,-445.0" size="124.0,52.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_K6fgURqfEeGI-vspxaR0EQ" containments="_jCVDABqfEeGI-vspxaR0EQ" name="se.kyh.ad10.timeloggers.server.entities">
+    <modelElement href="theTimeloggers.uml#_K6fgUBqfEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_K6fgUhqfEeGI-vspxaR0EQ" position="662.0,-1247.0" size="313.0,68.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_eV8SkBqCEeGI-vspxaR0EQ" name="PublicInterfaceImpl" generalizations="_VcZiMBqGEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_eV7rgBqCEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_eV8SkRqCEeGI-vspxaR0EQ" position="1855.0,-192.0" size="176.0,195.0"/>
+    <visibility xmi:id="_eV8SkhqCEeGI-vspxaR0EQ" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_EJk4ERqdEeGI-vspxaR0EQ" name="SecurityLayerImpl" associationsIn="_YL3p0BsuEeGIAYVm6HMqVQ" generalizations="_K1CqgBqdEeGI-vspxaR0EQ">
+    <modelElement href="theTimeloggers.uml#_EJk4EBqdEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_EJk4EhqdEeGI-vspxaR0EQ" position="1789.0,-451.0" size="169.0,194.0"/>
+    <visibility xmi:id="_EJk4ExqdEeGI-vspxaR0EQ" label="+"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_0JZHERqeEeGI-vspxaR0EQ" containments="_ESLvkBqfEeGI-vspxaR0EQ _nfBEMBq0EeGKxP_NiyvTUQ" name="se.kyh.ad10.timeloggers.server.dao.intf">
+    <modelElement href="theTimeloggers.uml#_0JZHEBqeEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_0JZHEhqeEeGI-vspxaR0EQ" position="304.0,-1248.0" size="338.0,70.0"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_hPUBgBqEEeGI-vspxaR0EQ" name="InfoTypeDAO">
+    <modelElement href="theTimeloggers.uml#_hPTacBqEEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_hPUBgRqEEeGI-vspxaR0EQ" position="-224.0,12.0" size="147.0,107.0"/>
+    <visibility xmi:id="_hPUBghqEEeGI-vspxaR0EQ" label="+"/>
+    <operations xmi:id="_96MyMBtAEeGWwMQJTcCviQ" name="saveInfoType">
+      <modelElement href="theTimeloggers.uml#_96MLIBtAEeGWwMQJTcCviQ"/>
+      <visibility xmi:id="_96MyMRtAEeGWwMQJTcCviQ" label="+"/>
+      <outParameters xmi:id="_96MyMhtAEeGWwMQJTcCviQ">
+        <modelElement href="theTimeloggers.uml#_96MLIRtAEeGWwMQJTcCviQ"/>
+        <type xmi:id="_96MyMxtAEeGWwMQJTcCviQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_96MyNBtAEeGWwMQJTcCviQ" name="name">
+        <modelElement href="theTimeloggers.uml#_96MLIhtAEeGWwMQJTcCviQ"/>
+        <type xmi:id="_96MyNRtAEeGWwMQJTcCviQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_BHXRwBtBEeGWwMQJTcCviQ" name="getInfoTypeName">
+      <modelElement href="theTimeloggers.uml#_BHWDoBtBEeGWwMQJTcCviQ"/>
+      <visibility xmi:id="_BHXRwRtBEeGWwMQJTcCviQ" label="+"/>
+      <outParameters xmi:id="_BHXRwhtBEeGWwMQJTcCviQ">
+        <modelElement href="theTimeloggers.uml#_BHWDoRtBEeGWwMQJTcCviQ"/>
+        <type xmi:id="_BHXRwxtBEeGWwMQJTcCviQ" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_BHXRxBtBEeGWwMQJTcCviQ" name="id">
+        <modelElement href="theTimeloggers.uml#_BHWqsBtBEeGWwMQJTcCviQ"/>
+        <type xmi:id="_BHXRxRtBEeGWwMQJTcCviQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_DTvCsBtBEeGWwMQJTcCviQ" name="deleteInfoType">
+      <modelElement href="theTimeloggers.uml#_DTuboBtBEeGWwMQJTcCviQ"/>
+      <visibility xmi:id="_DTvCsRtBEeGWwMQJTcCviQ" label="+"/>
+      <outParameters xmi:id="_DTvCshtBEeGWwMQJTcCviQ">
+        <modelElement href="theTimeloggers.uml#_DTuboRtBEeGWwMQJTcCviQ"/>
+        <type xmi:id="_DTvCsxtBEeGWwMQJTcCviQ" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_DTvCtBtBEeGWwMQJTcCviQ" name="id">
+        <modelElement href="theTimeloggers.uml#_DTubohtBEeGWwMQJTcCviQ"/>
+        <type xmi:id="_DTvCtRtBEeGWwMQJTcCviQ" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:PackageVisual" xmi:id="_IOfJ4RqbEeGI-vspxaR0EQ" containments="_shbQIBqeEeGI-vspxaR0EQ _dV4BEBqgEeGI-vspxaR0EQ" name="se.kyh.ad10.timeloggers.server.dao.impl">
+    <modelElement href="theTimeloggers.uml#_IOfJ4BqbEeGI-vspxaR0EQ"/>
+    <visualProperties xmi:id="_IOfJ4hqbEeGI-vspxaR0EQ" position="-87.0,-1256.0" size="300.0,88.0"/>
+  </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
