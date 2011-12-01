@@ -1,1 +1,17 @@
+# Common Filesystem Garbage
+.DS_Store
 .classpath
+.settings
+.buildpath
+*.tmproj
+*.tmproject
+tmtags
+*~
+Thumbs.db
+Desktop.ini
+nbproject
+.idea/
+Timelog.iml
+
+# Project Specific Ignores
+bin/*
