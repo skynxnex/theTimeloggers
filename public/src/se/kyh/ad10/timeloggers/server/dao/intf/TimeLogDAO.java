@@ -12,12 +12,12 @@ public interface TimeLogDAO {
    
    public boolean deleteTimeLog(int id);
    
-   public boolean saveTimeLog(String title, String comment, int duration, Date start, int projectId, String/*No type specified*/ userId);
-   
    public boolean startTimeLog(int userId, int projectId);
    
    public boolean stopTimeLog(int timeLogId, String title, String comment);
    
    public List<Timelog> getAllTimeLogsForUser(int userId);
+   
+   public boolean saveTimeLog(String title, String comment, int duration, Date start, int projectId, String userId);
    
    }

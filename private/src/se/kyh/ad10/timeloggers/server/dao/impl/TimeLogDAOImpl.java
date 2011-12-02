@@ -29,8 +29,7 @@ public class TimeLogDAOImpl extends DB implements TimeLogDAO {
 	}
 
 	@Override
-	public boolean saveTimeLog(String title, String comment, int duration,
-			Date start, int projectId, String userId) {
+	public boolean saveTimeLog(String title, String comment, int duration, Date start, int projectId, String userId) {
 		// TODO Auto-generated method stub
 		return false;
 	}
