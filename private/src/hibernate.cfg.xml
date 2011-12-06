@@ -25,13 +25,13 @@
   ~ Boston, MA  02110-1301  USA
   -->
 <hibernate-configuration>
- <session-factory name="">
+ <session-factory>
   <!-- Database connection settings -->
-  <property name="connection.driver_class">org.gjt.mm.mysql.Driver</property>
+  <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
   <!-- Fix url this is a example for url with mysql -->
   <property name="connection.url">jdbc:mysql://31.192.226.120/thetimeloggers</property>
   <!-- Add username and password -->
-  <property name="connection.username">project</property>
+  <property name="connection.username">root</property>
   <property name="connection.password">thetimeloggers</property>
   <!-- JDBC connection pool (use the built-in) -->
   <property name="connection.pool_size">10</property>
@@ -43,7 +43,5 @@
   <property name="show_sql">true</property>
   <!-- Drop and re-create the database schema on startup -->
   <property name="hbm2ddl.auto">create</property>
-  <mapping/>
-  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/"/>
  </session-factory>
 </hibernate-configuration>
