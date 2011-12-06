@@ -3,7 +3,6 @@ package se.kyh.ad10.timeloggersPublic.server;
 import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;

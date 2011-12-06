@@ -11,18 +11,27 @@ import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
+import se.kyh.ad10.timeloggers.server.entities.User;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 
 @SuppressWarnings("serial")
 public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicInterface {
 	
+	private int userId;
+	public String email;
+	public String password;
+	public UUID uuid;
+	public int adminLevel;
 	
 	protected PublicInterfaceImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 
-	public UUID uuid;
+	public User doLogin(UUID uuid) {
+		
+		return null;
+	}
 	
 	@Override
 	public UserDAO getUserDAO() throws RemoteException {
@@ -50,5 +59,13 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 	public ProjectDAO getProjectDAO() throws RemoteException {
 		ProjectDAO obj = new ProjectDAOImpl();
 		return obj;
+	}
+
+	public int getUserId() {
+		return userId;
+	}
+
+	private void setUserId(int userId) {
+		this.userId = userId;
 	}
 }
