@@ -23,7 +23,7 @@ import se.kyh.ad10.timeloggers.server.entities.UserInfo;
 public class DB {
 	private static SessionFactory sessionFactory = null;
 	
-	public static void initHibernate(){
+	public DB(){
 		File configFile = new File("hibernate.cfg.xml");
     	if( null == sessionFactory){
 	    	

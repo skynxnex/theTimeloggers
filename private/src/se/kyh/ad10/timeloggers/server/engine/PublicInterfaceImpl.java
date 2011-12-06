@@ -21,6 +21,7 @@ import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 @SuppressWarnings("serial")
 public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicInterface {
 	
+	protected DB db = new DB();
 	
 	protected PublicInterfaceImpl() throws RemoteException {
 		super();
