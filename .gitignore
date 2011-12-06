@@ -15,3 +15,5 @@ Timelog.iml
 
 # Project Specific Ignores
 bin/*
+private/bin/*
+public/bin/*
