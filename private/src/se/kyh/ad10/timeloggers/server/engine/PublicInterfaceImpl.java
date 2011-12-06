@@ -11,6 +11,7 @@ import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.User;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 
@@ -22,6 +23,8 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 	public String password;
 	public UUID uuid;
 	public int adminLevel;
+	protected DB db = new DB();
+
 	
 	protected PublicInterfaceImpl() throws RemoteException {
 		super();
