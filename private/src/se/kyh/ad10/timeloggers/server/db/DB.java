@@ -1,9 +1,11 @@
 package se.kyh.ad10.timeloggers.server.db;
 
 import java.io.File;
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
 import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 import se.kyh.ad10.timeloggers.server.entities.Customer;
 import se.kyh.ad10.timeloggers.server.entities.FeeInProject;

@@ -3,7 +3,6 @@ package se.kyh.ad10.timeloggers.server.engine;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.UUID;
-
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.ProjectDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.UserDAOImpl;
@@ -18,6 +17,7 @@ import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 @SuppressWarnings("serial")
 public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicInterface {
 	
+
 	private int userId;
 	public String email;
 	public String password;
