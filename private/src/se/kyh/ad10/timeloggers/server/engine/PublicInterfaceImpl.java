@@ -1,8 +1,12 @@
 package se.kyh.ad10.timeloggers.server.engine;
 
+import java.io.File;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.UUID;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.ProjectDAOImpl;
@@ -11,6 +15,7 @@ import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 
 @SuppressWarnings("serial")
