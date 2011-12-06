@@ -3,8 +3,8 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 import java.util.List;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO;
-import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 import se.kyh.ad10.timeloggers.server.db.DB;
+import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 
 public class AttendedTimeDAOImpl extends DB implements AttendedTimeDAO {
 

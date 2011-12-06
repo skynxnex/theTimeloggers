@@ -1,6 +1,7 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
 import java.util.List;
+
 import se.kyh.ad10.timeloggers.server.dao.intf.SystemAdminLevelDAO;
 import se.kyh.ad10.timeloggers.server.db.DB;
 
