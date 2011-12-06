@@ -4,7 +4,10 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
+import org.hibernate.Session;
+
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.Project;
 
 @SuppressWarnings("serial")
@@ -17,7 +20,7 @@ public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
 
 	@Override
 	public boolean saveProjectActivityStatus(int id) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
@@ -28,15 +31,17 @@ public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
 	}
 
 	@Override
-	public boolean saveProject(String name, int budget, int estimatedTime,
-			int customerId) {
-		// TODO Auto-generated method stub
+	public boolean saveProject(Project project) {
+		Session dbsession = DB.get().getSession();
+		dbsession.beginTransaction();
+		dbsession.save(project);
+		dbsession.getTransaction().commit();
+		dbsession.close();
 		return false;
 	}
 
 	@Override
 	public Project getProject(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return (Project)DB.get().getSession().createQuery("from Project where id=:id").setInteger("id", id).uniqueResult();
 	}
 }

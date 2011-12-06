@@ -23,7 +23,6 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 	public String password;
 	public UUID uuid;
 	public int adminLevel;
-	protected DB db = new DB();
 
 	
 	protected PublicInterfaceImpl() throws RemoteException {

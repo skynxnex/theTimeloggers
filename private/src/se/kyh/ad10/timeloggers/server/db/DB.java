@@ -21,8 +21,9 @@ import se.kyh.ad10.timeloggers.server.entities.UserInfo;
 
 public class DB {
 	private static SessionFactory sessionFactory = null;
+	private static DB db;
 	
-	public DB(){
+	private DB(){
 		File configFile = new File("hibernate.cfg.xml");
     	if( null == sessionFactory){
 	    	
@@ -44,11 +45,19 @@ public class DB {
 	    	sessionFactory = configuration.buildSessionFactory();
     	}
 	}
-	public static SessionFactory getSessionFactory(){
+	
+	public static DB get() {
+		if (null == db) {
+			db = new DB();
+		}
+		return db;
+	}
+	
+	public SessionFactory getSessionFactory(){
 		return sessionFactory;
 	}
 	
-	public static Session getSession(){
+	public Session getSession(){
 		return sessionFactory.openSession();
 	}
 }
