@@ -1,10 +1,16 @@
 package se.kyh.ad10.timeloggers.server.dao.intf;
 
+import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
+import se.kyh.ad10.timeloggers.server.entities.ProjectAdminLevel;
 
 
-public interface ProjectAdminLevelDAO {
-   public String getProjectAdminLevelName(int id);
+
+public interface ProjectAdminLevelDAO extends Remote, Serializable {
+	
+   public String getProjectAdminLevelName(int id) throws RemoteException;
    
-   public boolean saveProjectAdminLevel(String name, int level);
+   public boolean saveProjectAdminLevel(ProjectAdminLevel projectAdminLevel) throws RemoteException;
    
    }

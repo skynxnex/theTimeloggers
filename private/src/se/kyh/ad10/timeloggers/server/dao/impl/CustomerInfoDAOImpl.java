@@ -6,7 +6,9 @@ import java.util.List;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO;
 import se.kyh.ad10.timeloggers.server.entities.Customer;
+import se.kyh.ad10.timeloggers.server.entities.CustomerInfo;
 
+@SuppressWarnings("serial")
 public class CustomerInfoDAOImpl extends UnicastRemoteObject implements CustomerInfoDAO {
 
 	protected CustomerInfoDAOImpl() throws RemoteException {
@@ -15,7 +17,7 @@ public class CustomerInfoDAOImpl extends UnicastRemoteObject implements Customer
 	}
 
 	@Override
-	public boolean saveCustomerInfo(String value, int customerId, int infoTypeId) {
+	public boolean saveCustomerInfo(CustomerInfo customerInfo) {
 		// TODO Auto-generated method stub
 		return false;
 	}
