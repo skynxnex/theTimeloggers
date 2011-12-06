@@ -43,7 +43,18 @@
   <property name="show_sql">true</property>
   <!-- Drop and re-create the database schema on startup -->
   <property name="hbm2ddl.auto">create</property>
-  <mapping/>
-  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/UserInfoDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/UserDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/AttendedTimeDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/CustomerDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/CustomerInfoDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/FeeInProjectDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/InfoTypeInfoDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/ProjectDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/ProjectAdminLevelDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/RoleDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/SystemAdminLevelDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/TimeLogDAOImpl.hbm.xml"/>
+  <mapping resource="se/kyh/ad10/timeloggers/server/dao/impl/UserInProjectDAOImpl.hbm.xml"/>
  </session-factory>
 </hibernate-configuration>
