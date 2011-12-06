@@ -1,12 +1,18 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.Customer;
 
-public class CustomerDAOImpl extends DB implements CustomerDAO {
+public class CustomerDAOImpl extends UnicastRemoteObject implements CustomerDAO {
+
+	public CustomerDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public boolean saveCustomer(String name) {
@@ -23,7 +29,9 @@ public class CustomerDAOImpl extends DB implements CustomerDAO {
 	@Override
 	public Customer getCustomer(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		Customer customer = new Customer();
+		customer.setName("Linda");
+		return customer;
 	}
 
 	@Override

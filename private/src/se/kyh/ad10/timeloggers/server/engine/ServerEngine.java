@@ -4,25 +4,24 @@ import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
-import java.rmi.server.UnicastRemoteObject;
-import java.util.UUID;
 
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 /**
  * Själva servern där allt snurrar
  */
-public class ServerEngine extends UnicastRemoteObject implements SecurityLayer {
+
+
+public class ServerEngine {
 
 	private static final long serialVersionUID = 5285516671799841014L;
 	
 	public ServerEngine() throws RemoteException {
 		super();
-			// TODO Auto-generated constructor stubs
 		}
    
    public static void main(String args[]) {
-       System.out.println("RMI server started");
+       System.out.println("RMI server starting");
 
        // Create and install a security manager
        if (System.getSecurityManager() == null) {
@@ -41,7 +40,7 @@ public class ServerEngine extends UnicastRemoteObject implements SecurityLayer {
        }
 
        try {
-    	   ServerEngine obj = new ServerEngine();
+    	   SecurityLayer obj = new SecurityLayerImpl();
 
            Naming.rebind("TimelogServer", obj);
 
@@ -50,19 +49,7 @@ public class ServerEngine extends UnicastRemoteObject implements SecurityLayer {
            System.err.println("RMI server exception:" + e);
            e.printStackTrace();
        }
+       System.out.println("Server started OK");
    }
-
-   private int session = 12345;
-
-	
-	public int getSession() throws RemoteException {
-		return session;
-	}
-
-
-	public UUID createSession() throws RemoteException {
-
-		return null;
-	}
    
 }

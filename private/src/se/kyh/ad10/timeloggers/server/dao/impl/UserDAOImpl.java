@@ -1,13 +1,20 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.Role;
 import se.kyh.ad10.timeloggers.server.entities.User;
 
-public class UserDAOImpl extends DB implements UserDAO {
+@SuppressWarnings("serial")
+public class UserDAOImpl extends UnicastRemoteObject implements UserDAO {
+
+	public UserDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public void getUserById(int id) {
@@ -64,7 +71,7 @@ public class UserDAOImpl extends DB implements UserDAO {
 	}
 
 	@Override
-	public List getUsersForProject(int projectId) {
+	public List<User> getUsersForProject(int projectId) {
 		// TODO Auto-generated method stub
 		return null;
 	}

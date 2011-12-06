@@ -1,9 +1,11 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.io.Serializable;
 import java.util.Set;
 import java.util.HashSet;
 
-public class User {
+@SuppressWarnings("serial")
+public class User implements Serializable {
    private int id;
    
    public void setId(int value) {

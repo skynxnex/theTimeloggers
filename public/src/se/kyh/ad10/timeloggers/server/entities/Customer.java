@@ -1,9 +1,11 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
+import java.io.Serializable;
 import java.util.HashSet;
+import java.util.Set;
 
-public class Customer {
+@SuppressWarnings("serial")
+public class Customer implements Serializable {
    /**
     * <pre>
     *           0..*     0..*

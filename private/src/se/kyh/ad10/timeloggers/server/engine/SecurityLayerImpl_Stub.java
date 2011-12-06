@@ -10,12 +10,12 @@ public final class SecurityLayerImpl_Stub
     private static final long serialVersionUID = 2;
     
     private static java.lang.reflect.Method $method_createSession_0;
-    private static java.lang.reflect.Method $method_getSession_1;
+    private static java.lang.reflect.Method $method_getPublicInterface_1;
     
     static {
 	try {
 	    $method_createSession_0 = se.kyh.ad10.timeloggersPublic.server.SecurityLayer.class.getMethod("createSession", new java.lang.Class[] {});
-	    $method_getSession_1 = se.kyh.ad10.timeloggersPublic.server.SecurityLayer.class.getMethod("getSession", new java.lang.Class[] {});
+	    $method_getPublicInterface_1 = se.kyh.ad10.timeloggersPublic.server.SecurityLayer.class.getMethod("getPublicInterface", new java.lang.Class[] {java.util.UUID.class});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
 		"stub class initialization failed");
@@ -45,13 +45,13 @@ public final class SecurityLayerImpl_Stub
 	}
     }
     
-    // implementation of getSession()
-    public int getSession()
+    // implementation of getPublicInterface(UUID)
+    public se.kyh.ad10.timeloggersPublic.server.PublicInterface getPublicInterface(java.util.UUID $param_UUID_1)
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_getSession_1, null, 2009823118639972122L);
-	    return ((java.lang.Integer) $result).intValue();
+	    Object $result = ref.invoke(this, $method_getPublicInterface_1, new java.lang.Object[] {$param_UUID_1}, -334880199919191097L);
+	    return ((se.kyh.ad10.timeloggersPublic.server.PublicInterface) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {
