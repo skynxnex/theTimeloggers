@@ -7,7 +7,7 @@ import java.rmi.RemoteException;
 import se.kyh.ad10.timeloggers.server.entities.FeeInProject;
 
 
-public interface FeeInProjecctDAO extends Remote, Serializable {
+public interface FeeInProjectDAO extends Remote, Serializable {
 	
    public boolean saveFeeInProject(FeeInProject feeInProject) throws RemoteException;
    

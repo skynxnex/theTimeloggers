@@ -5,7 +5,7 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 
 public final class FeeInProjectDAOImpl_Stub
     extends java.rmi.server.RemoteStub
-    implements se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjecctDAO, java.rmi.Remote
+    implements se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO, java.rmi.Remote
 {
     private static final long serialVersionUID = 2;
     
@@ -14,8 +14,8 @@ public final class FeeInProjectDAOImpl_Stub
     
     static {
 	try {
-	    $method_deleteFeeInProject_0 = se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjecctDAO.class.getMethod("deleteFeeInProject", new java.lang.Class[] {int.class});
-	    $method_saveFeeInProject_1 = se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjecctDAO.class.getMethod("saveFeeInProject", new java.lang.Class[] {se.kyh.ad10.timeloggers.server.entities.FeeInProject.class});
+	    $method_deleteFeeInProject_0 = se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO.class.getMethod("deleteFeeInProject", new java.lang.Class[] {int.class});
+	    $method_saveFeeInProject_1 = se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO.class.getMethod("saveFeeInProject", new java.lang.Class[] {se.kyh.ad10.timeloggers.server.entities.FeeInProject.class});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
 		"stub class initialization failed");
