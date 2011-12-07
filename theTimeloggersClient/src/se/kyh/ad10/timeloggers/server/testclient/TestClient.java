@@ -31,12 +31,12 @@ import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 			PublicInterface pii = serverObj.getPublicInterface(uuid);
 			Project obj = pii.getProjectDAO().getProject(1);
 			
-//			Project project = new Project();
-//			project.setName("TestProject1");
+			Project project = new Project();
+			project.setName("TestProject1");
 //			project.setEstimatedTime(60);
 //			project.setBudget(100000);
 //			
-//			obj.saveProject(project);
+			pii.getProjectDAO().saveProject(project);
 			
 			System.out.println(obj.getName());
 			System.out.println(obj.getBudget());

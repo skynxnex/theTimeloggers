@@ -4,7 +4,16 @@ import java.io.Serializable;
 import java.util.Set;
 import java.util.HashSet;
 
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id ;
+
+import org.hibernate.annotations.Entity;
+import org.hibernate.annotations.Table;
+
 @SuppressWarnings("serial")
+@Entity
+@Table(appliesTo = "project")
 public class Project implements Serializable {
 
 	private int id;
@@ -18,6 +27,7 @@ public class Project implements Serializable {
 	private Set<Timelog> timelog;
 	private Set<UserInProject> userInProject;
 
+	@Column(name = "budget")
 	public int getBudget() {
 		return this.budget;
 	}
@@ -28,11 +38,11 @@ public class Project implements Serializable {
 		}
 		return this.customer;
 	}
-
+	@Column(name = "customer_id")
 	public int getCustomerId() {
 		return this.customerId;
 	}
-
+	@Column(name = "estimated_time")
 	public int getEstimatedTime() {
 		return this.estimatedTime;
 	}
@@ -43,13 +53,16 @@ public class Project implements Serializable {
 		}
 		return this.feeInProject;
 	}
-
+	@Id
+	@GeneratedValue
+	@Column(name = "project_id")
 	public int getId() {
-		return this.id;
+		return this.id ;
 	}
 
+	@Column(name = "name")
 	public String getName() {
-		return this.name;
+		return this.name ;
 	}
 
 	public Set<Timelog> getTimelog() {
@@ -65,7 +78,7 @@ public class Project implements Serializable {
 		}
 		return this.userInProject;
 	}
-
+	@Column(name = "active")
 	public boolean isActive() {
 		return this.active;
 	}
