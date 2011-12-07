@@ -17,3 +17,4 @@ Timelog.iml
 bin/*
 private/bin/*
 public/bin/*
+theTimeloggersClient/bin/*
