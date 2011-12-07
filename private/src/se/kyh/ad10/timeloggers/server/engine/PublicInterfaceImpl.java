@@ -7,9 +7,18 @@ import java.util.UUID;
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.ProjectDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.UserDAOImpl;
+import se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.InfoTypeDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.SystemAdminLevelDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
 import se.kyh.ad10.timeloggers.server.entities.User;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
@@ -69,5 +78,60 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 
 	private void setUserId(int userId) {
 		this.userId = userId;
+	}
+
+	@Override
+	public AttendedTimeDAO getAttendedTimeDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public CustomerInfoDAO getCustomerInfoDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public FeeInProjectDAO getFeeInProjectDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public InfoTypeDAO getInfoTypeDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProjectAdminLevelDAO getProjectAdminLevelDAO()
+			throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RoleDAO getRoleDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public SystemAdminLevelDAO getSystemAdminLevelDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public TimeLogDAO getTimelogDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserInProjectDAO getUserInProjectDAO() throws RemoteException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

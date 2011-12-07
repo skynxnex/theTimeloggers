@@ -3,11 +3,11 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-import se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjecctDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO;
 import se.kyh.ad10.timeloggers.server.entities.FeeInProject;
 
 @SuppressWarnings("serial")
-public class FeeInProjectDAOImpl extends UnicastRemoteObject implements FeeInProjecctDAO {
+public class FeeInProjectDAOImpl extends UnicastRemoteObject implements FeeInProjectDAO {
 
 	protected FeeInProjectDAOImpl() throws RemoteException {
 		super();
