@@ -25,6 +25,7 @@ public class DB {
 	
 	private DB(){
 		File configFile = new File("src/hibernate.cfg.xml");
+		System.out.println(configFile.getAbsolutePath());
     	if( null == sessionFactory){
 	    	
 			sessionFactory = new Configuration()
