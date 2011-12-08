@@ -1,8 +1,6 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
-import java.util.Set;
-import java.util.HashSet;
 
 import javax.persistence.Basic;
 import javax.persistence.Embeddable;

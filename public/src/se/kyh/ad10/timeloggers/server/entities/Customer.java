@@ -1,10 +1,8 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -13,6 +11,7 @@ import javax.persistence.Table;
 @SuppressWarnings("serial")
 @Entity
 @Table(name = "customer")
+@Embeddable
 public class Customer implements Serializable {
 	
 	@Id

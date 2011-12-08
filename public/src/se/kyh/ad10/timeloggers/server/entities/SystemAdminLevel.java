@@ -1,9 +1,7 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
-
 import javax.persistence.Column;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -11,6 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "system_admin_level")
+@Embeddable
 public class SystemAdminLevel {
 	
 	@Id

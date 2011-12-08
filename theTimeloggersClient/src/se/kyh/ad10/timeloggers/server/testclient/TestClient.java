@@ -5,7 +5,6 @@ import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RMISecurityManager;
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
@@ -50,7 +49,6 @@ public class TestClient {
 			timelog.setComment("Detta Šr en kommentar");
 			timelog.setDuration(60);
 			timelog.setTitle("Timelog 1");
-			timelog.setAttendedTimeId(50);
 			timelog.setStart(date);
 
 //			// Save the object

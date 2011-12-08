@@ -25,9 +25,6 @@ public class Timelog implements Serializable {
 	@GeneratedValue
 	private int id;
 
-	@Column(name = "attendedtime_id")
-	private int attendedTimeId;
-
 	@Column(name = "comment")
 	private String comment;
 
@@ -51,10 +48,6 @@ public class Timelog implements Serializable {
 	private AttendedTime attendedTime;
 
 	/*---------------------*/
-
-	public int getAttendedTimeId() {
-		return this.attendedTimeId;
-	}
 
 	public String getComment() {
 		return this.comment;
@@ -90,10 +83,6 @@ public class Timelog implements Serializable {
 
 	public String getTitle() {
 		return this.title;
-	}
-
-	public void setAttendedTimeId(int value) {
-		this.attendedTimeId = value;
 	}
 
 	public void setComment(String value) {

@@ -1,9 +1,7 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
-
 import javax.persistence.Basic;
+import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -14,6 +12,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_in_project")
+@Embeddable
 public class UserInProject {
 	
 	@Id

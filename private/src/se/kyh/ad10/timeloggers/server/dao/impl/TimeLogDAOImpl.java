@@ -46,8 +46,8 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 			dbsession.beginTransaction();
 			dbsession.saveOrUpdate(timelog);
 			dbsession.getTransaction().commit();
-			dbsession.close();			
 			success = dbsession.getTransaction().wasCommitted();
+			dbsession.close();			
 		} catch (HibernateException e) {
 			throw new RemoteException("Database save failed", e);
 		}
