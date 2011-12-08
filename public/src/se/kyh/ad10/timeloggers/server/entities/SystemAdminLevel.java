@@ -3,11 +3,27 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.util.Set;
 import java.util.HashSet;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "system_admin_level")
 public class SystemAdminLevel {
+	
+	@Id
+	@GeneratedValue
 	private int id;
+	
+	@Column(name = "level")
 	private int level;
+	
+	@Column(name = "name")
 	private String name;
-	private Set<User> userImpl;
+	
+//	private Set<User> userImpl;
 
 	public int getId() {
 		return this.id;
@@ -21,12 +37,12 @@ public class SystemAdminLevel {
 		return this.name;
 	}
 
-	public Set<User> getUserImpl() {
-		if (this.userImpl == null) {
-			this.userImpl = new HashSet<User>();
-		}
-		return this.userImpl;
-	}
+//	public Set<User> getUserImpl() {
+//		if (this.userImpl == null) {
+//			this.userImpl = new HashSet<User>();
+//		}
+//		return this.userImpl;
+//	}
 
 	public void setId(int value) {
 		this.id = value;

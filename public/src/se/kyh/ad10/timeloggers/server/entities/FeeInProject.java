@@ -3,15 +3,40 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.util.Set;
 import java.util.HashSet;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "fee_in_project")
 public class FeeInProject {
-	private int fee;
+	
+	@Id
+	@GeneratedValue
 	private int id;
-	private Set<Project> project;
+	
+	@Column(name = "fee")
+	private int fee;
+	
+	@ManyToOne
+	@JoinColumn(name = "role_id")
+	@Basic(fetch = FetchType.EAGER)
+	private Role role;
+	
+	
+
 	private boolean projectId;
-	private Set<Role> role;
-	private int roleId;
-	private Set<AttendedTime> userRoleInProject;
-	private Set<AttendedTime> userRoleInProject1;
+	
+//	private Set<Role> role;
+//	private Set<Project> project;
+//	private Set<AttendedTime> userRoleInProject;
+//	private Set<AttendedTime> userRoleInProject1;
 
 	public int getFee() {
 		return this.fee;
@@ -20,39 +45,39 @@ public class FeeInProject {
 	public int getId() {
 		return this.id;
 	}
-
-	public Set<Project> getProject() {
-		if (this.project == null) {
-			this.project = new HashSet<Project>();
-		}
-		return this.project;
+	
+	public Role getRole() {
+		return role;
 	}
 
-
-	public Set<Role> getRole() {
-		if (this.role == null) {
-			this.role = new HashSet<Role>();
-		}
-		return this.role;
+	public void setRole(Role role) {
+		this.role = role;
 	}
 
-	public int getRoleId() {
-		return this.roleId;
-	}
+//	public Set<Project> getProject() {
+//		if (this.project == null) {
+//			this.project = new HashSet<Project>();
+//		}
+//		return this.project;
+//	}
 
-	public Set<AttendedTime> getUserRoleInProject() {
-		if (this.userRoleInProject == null) {
-			this.userRoleInProject = new HashSet<AttendedTime>();
-		}
-		return this.userRoleInProject;
-	}
 
-	public Set<AttendedTime> getUserRoleInProject1() {
-		if (this.userRoleInProject1 == null) {
-			this.userRoleInProject1 = new HashSet<AttendedTime>();
-		}
-		return this.userRoleInProject1;
-	}
+//	public Set<Role> getRole() {
+//		if (this.role == null) {
+//			this.role = new HashSet<Role>();
+//		}
+//		return this.role;
+//	}
+
+
+
+//	public Set<AttendedTime> getUserRoleInProject() {
+//		if (this.userRoleInProject == null) {
+//			this.userRoleInProject = new HashSet<AttendedTime>();
+//		}
+//		return this.userRoleInProject;
+//	}
+
 
 	public boolean isProjectId() {
 		return this.projectId;
@@ -68,10 +93,6 @@ public class FeeInProject {
 
 	public void setProjectId(boolean value) {
 		this.projectId = value;
-	}
-
-	public void setRoleId(int value) {
-		this.roleId = value;
 	}
 
 }
