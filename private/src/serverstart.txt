@@ -1,1 +1,2 @@
 java -Djava.security.policy=server.policy -classpath .:../../public/bin/ se.kyh.ad10.timeloggers.server.engine.ServEngine
+sudo java -Djava.security.policy=server.policy -classpath .:../../public/bin/:../lib/*  se.kyh.ad10.timeloggers.server.engine.ServerEngine

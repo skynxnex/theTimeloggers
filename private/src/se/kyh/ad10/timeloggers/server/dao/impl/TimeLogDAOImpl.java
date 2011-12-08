@@ -4,6 +4,7 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
@@ -38,13 +39,19 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 	}
 
 	@Override
-	public boolean saveTimeLog(Timelog timelog) {
-		Session dbsession = DB.get().getSession();
-		dbsession.beginTransaction();
-		dbsession.saveOrUpdate(timelog);
-		dbsession.getTransaction().commit();
-		dbsession.close();
-		return false;
+	public boolean saveTimeLog(Timelog timelog) throws RemoteException {
+		boolean success = false;
+		try {
+			Session dbsession = DB.get().getSession();
+			dbsession.beginTransaction();
+			dbsession.saveOrUpdate(timelog);
+			dbsession.getTransaction().commit();
+			dbsession.close();			
+			success = dbsession.getTransaction().wasCommitted();
+		} catch (HibernateException e) {
+			throw new RemoteException("Database save failed", e);
+		}
+		return success; 
 	}
 
 	@Override
@@ -63,5 +70,14 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 	public List<Timelog> getAllTimeLogsForUser(int userId) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public List<Timelog> getAllTimelogs() throws RemoteException {
+		Session dbsession = DB.get().getSession();
+		dbsession.beginTransaction();
+		List<Timelog> result = dbsession.createQuery( "from Timelog" ).list();
+		dbsession.getTransaction().commit();
+		dbsession.close();
+		return result;
 	}
 }
