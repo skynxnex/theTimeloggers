@@ -23,7 +23,7 @@ public class TestClient {
 
 	public static void main(String args[]) throws IOException, NotBoundException  {
 		// Get instance of SecurityLayer implementation
-		serverObj = (SecurityLayer)Naming.lookup("//localhost:1099/"+SecurityLayer.name); 
+		serverObj = (SecurityLayer)Naming.lookup("//31.192.226.120:1099/"+SecurityLayer.name); 
 
 		try {
 			// Create and install a security manager
