@@ -5,10 +5,12 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.UUID;
 
-public interface SecurityLayer extends Remote, Serializable{
-	
-   public PublicInterface getPublicInterface(UUID sessionID) throws RemoteException;
+public interface SecurityLayer extends Remote, Serializable {
 
-   public UUID createSession() throws RemoteException;
-   
-   }
+	public static final String name = "TimelogServer";
+
+	public PublicInterface getPublicInterface(UUID sessionID) throws RemoteException;
+
+	public UUID createSession() throws RemoteException;
+
+}

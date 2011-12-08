@@ -17,7 +17,7 @@ public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
 
 	@Override
 	public boolean saveProjectActivityStatus(int id) {
-		// TODO Auto-generated method stub
+		
 		return false;
 	}
 
@@ -28,15 +28,24 @@ public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
 	}
 
 	@Override
-	public boolean saveProject(String name, int budget, int estimatedTime,
-			int customerId) {
-		// TODO Auto-generated method stub
+	public boolean saveProject(Project project) {
+//		Session dbsession = DB.get().getSession();
+//		dbsession.beginTransaction();
+//		dbsession.save(project);
+//		dbsession.getTransaction().commit();
+//		dbsession.close();
 		return false;
 	}
 
 	@Override
 	public Project getProject(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		Project project = new Project();
+		project.setId(id);
+		project.setName("TESTVALUE");
+		project.setEstimatedTime(10000);
+		project.setBudget(1000000000);
+		
+		return project;
+//		return (Project)DB.get().getSession().createQuery("from Project where id=:id").setInteger("id", id).uniqueResult();
 	}
 }

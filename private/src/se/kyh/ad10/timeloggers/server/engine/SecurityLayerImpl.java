@@ -12,9 +12,6 @@ import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 public class SecurityLayerImpl extends UnicastRemoteObject implements SecurityLayer {
 
-		/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2336179925218126332L;
 	public static Map<UUID, PublicInterface> map;
 

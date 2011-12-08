@@ -1,9 +1,16 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
 
-public class UserInProjectDAOImpl extends DB implements UserInProjectDAO {
+@SuppressWarnings("serial")
+public class UserInProjectDAOImpl extends UnicastRemoteObject implements UserInProjectDAO {
+
+	protected UserInProjectDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public boolean addUserToProject(int userId, int projectId,

@@ -18,7 +18,7 @@ public final class ProjectDAOImpl_Stub
 	try {
 	    $method_getAllProjectsForCustomer_0 = se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO.class.getMethod("getAllProjectsForCustomer", new java.lang.Class[] {int.class, int.class});
 	    $method_getProject_1 = se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO.class.getMethod("getProject", new java.lang.Class[] {int.class});
-	    $method_saveProject_2 = se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO.class.getMethod("saveProject", new java.lang.Class[] {java.lang.String.class, int.class, int.class, int.class});
+	    $method_saveProject_2 = se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO.class.getMethod("saveProject", new java.lang.Class[] {se.kyh.ad10.timeloggers.server.entities.Project.class});
 	    $method_saveProjectActivityStatus_3 = se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO.class.getMethod("saveProjectActivityStatus", new java.lang.Class[] {int.class});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
@@ -65,12 +65,12 @@ public final class ProjectDAOImpl_Stub
 	}
     }
     
-    // implementation of saveProject(String, int, int, int)
-    public boolean saveProject(java.lang.String $param_String_1, int $param_int_2, int $param_int_3, int $param_int_4)
+    // implementation of saveProject(Project)
+    public boolean saveProject(se.kyh.ad10.timeloggers.server.entities.Project $param_Project_1)
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_saveProject_2, new java.lang.Object[] {$param_String_1, new java.lang.Integer($param_int_2), new java.lang.Integer($param_int_3), new java.lang.Integer($param_int_4)}, 4928711067988687849L);
+	    Object $result = ref.invoke(this, $method_saveProject_2, new java.lang.Object[] {$param_Project_1}, 480939045980368239L);
 	    return ((java.lang.Boolean) $result).booleanValue();
 	} catch (java.lang.RuntimeException e) {
 	    throw e;

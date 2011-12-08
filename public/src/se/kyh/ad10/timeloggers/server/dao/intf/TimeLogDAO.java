@@ -1,23 +1,26 @@
 package se.kyh.ad10.timeloggers.server.dao.intf;
 
-import java.sql.Date;
+import java.io.Serializable;
+import java.rmi.Remote;
+import java.rmi.RemoteException;
 import java.util.List;
 
 import se.kyh.ad10.timeloggers.server.entities.Timelog;
 
-public interface TimeLogDAO {
-   public List<Timelog> getAllTimeLogsForUserInProject(int userId, int projectId);
+public interface TimeLogDAO extends Remote, Serializable {
+	
+   public List<Timelog> getAllTimeLogsForUserInProject(int userId, int projectId) throws RemoteException;
    
-   public List<Timelog> getAllTimelogsForProject(int projectId);
+   public List<Timelog> getAllTimelogsForProject(int projectId) throws RemoteException;
    
-   public boolean deleteTimeLog(int id);
+   public boolean deleteTimeLog(int id) throws RemoteException;
    
-   public boolean startTimeLog(int userId, int projectId);
+   public boolean startTimeLog(int userId, int projectId) throws RemoteException;
    
-   public boolean stopTimeLog(int timeLogId, String title, String comment);
+   public boolean stopTimeLog(int timeLogId, String title, String comment) throws RemoteException;
    
-   public List<Timelog> getAllTimeLogsForUser(int userId);
+   public List<Timelog> getAllTimeLogsForUser(int userId) throws RemoteException;
    
-   public boolean saveTimeLog(String title, String comment, int duration, Date start, int projectId, String userId);
+   public boolean saveTimeLog(Timelog timelog) throws RemoteException;
    
    }
