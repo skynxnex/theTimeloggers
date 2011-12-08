@@ -4,20 +4,36 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@SuppressWarnings("serial")
-public class Customer implements Serializable {
-	private boolean active;
-	private Set<CustomerInfo> customerInfo;
-	private int id;
-	private String name;
-	private Set<Project> project;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	public Set<CustomerInfo> getCustomerInfo() {
-		if (this.customerInfo == null) {
-			this.customerInfo = new HashSet<CustomerInfo>();
-		}
-		return this.customerInfo;
-	}
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "customer")
+public class Customer implements Serializable {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@Column(name = "name")
+	private String name;
+	
+	@Column(name = "active")
+	private boolean active;
+	
+//	private Set<CustomerInfo> customerInfo;
+//	private Set<Project> project;
+	
+//	public Set<CustomerInfo> getCustomerInfo() {
+//		if (this.customerInfo == null) {
+//			this.customerInfo = new HashSet<CustomerInfo>();
+//		}
+//		return this.customerInfo;
+//	}
 
 	public int getId() {
 		return this.id;
@@ -27,12 +43,12 @@ public class Customer implements Serializable {
 		return this.name;
 	}
 
-	public Set<Project> getProject() {
-		if (this.project == null) {
-			this.project = new HashSet<Project>();
-		}
-		return this.project;
-	}
+//	public Set<Project> getProject() {
+//		if (this.project == null) {
+//			this.project = new HashSet<Project>();
+//		}
+//		return this.project;
+//	}
 
 	public boolean isActive() {
 		return this.active;

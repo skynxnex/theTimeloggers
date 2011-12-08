@@ -3,39 +3,60 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "user_info")
 public class UserInfo {
+	
+	@Id
+	@GeneratedValue
 	private int id;
-	private Set<InfoType> infoType;
-	private int infoTypeId;
-	private Set<User> user;
-	private int userId;
+	
+	@ManyToOne
+	@JoinColumn(name = "info_type_id")
+	@Basic(fetch = FetchType.EAGER)
+	private InfoType infoType;
+	
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	@Basic(fetch = FetchType.EAGER)
+	private User user;
+	
+	@Column(name = "value")
 	private String value;
+	
+//	private Set<InfoType> infoType;
+//	private Set<User> user;
 
 	public int getId() {
 		return this.id;
 	}
 
-	public Set<InfoType> getInfoType() {
-		if (this.infoType == null) {
-			this.infoType = new HashSet<InfoType>();
-		}
-		return this.infoType;
-	}
+//	public Set<InfoType> getInfoType() {
+//		if (this.infoType == null) {
+//			this.infoType = new HashSet<InfoType>();
+//		}
+//		return this.infoType;
+//	}
 
-	public int getInfoTypeId() {
-		return this.infoTypeId;
-	}
 
-	public Set<User> getUser() {
-		if (this.user == null) {
-			this.user = new HashSet<User>();
-		}
-		return this.user;
-	}
+//	public Set<User> getUser() {
+//		if (this.user == null) {
+//			this.user = new HashSet<User>();
+//		}
+//		return this.user;
+//	}
 
-	public int getUserId() {
-		return this.userId;
-	}
+
 
 	public String getValue() {
 		return this.value;
@@ -45,16 +66,23 @@ public class UserInfo {
 		this.id = value;
 	}
 
-	public void setInfoTypeId(int value) {
-		this.infoTypeId = value;
-	}
-
-	public void setUserId(int value) {
-		this.userId = value;
-	}
-
 	public void setValue(String value) {
 		this.value = value;
 	}
 
+	public InfoType getInfoType() {
+		return infoType;
+	}
+
+	public void setInfoType(InfoType infoType) {
+		this.infoType = infoType;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 }

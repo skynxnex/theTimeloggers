@@ -3,41 +3,54 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-public class InfoType {
-	private Set<CustomerInfo> customerInfoImpl;
-	private int id;
-	private Set<UserInfo> info;
-	private String name;
-	private Set<UserInfo> userInfo;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-	public Set<CustomerInfo> getCustomerInfoImpl() {
-		if (this.customerInfoImpl == null) {
-			this.customerInfoImpl = new HashSet<CustomerInfo>();
-		}
-		return this.customerInfoImpl;
-	}
+@Entity
+@Table(name = "info_type")
+public class InfoType {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@Column(name = "name")
+	private String name;
+//	private Set<CustomerInfo> customerInfoImpl;
+//	private Set<UserInfo> info;
+//	private Set<UserInfo> userInfo;
+
+//	public Set<CustomerInfo> getCustomerInfoImpl() {
+//		if (this.customerInfoImpl == null) {
+//			this.customerInfoImpl = new HashSet<CustomerInfo>();
+//		}
+//		return this.customerInfoImpl;
+//	}
 
 	public int getId() {
 		return this.id;
 	}
 
-	public Set<UserInfo> getInfo() {
-		if (this.info == null) {
-			this.info = new HashSet<UserInfo>();
-		}
-		return this.info;
-	}
+//	public Set<UserInfo> getInfo() {
+//		if (this.info == null) {
+//			this.info = new HashSet<UserInfo>();
+//		}
+//		return this.info;
+//	}
 
 	public String getName() {
 		return this.name;
 	}
 
-	public Set<UserInfo> getUserInfo() {
-		if (this.userInfo == null) {
-			this.userInfo = new HashSet<UserInfo>();
-		}
-		return this.userInfo;
-	}
+//	public Set<UserInfo> getUserInfo() {
+//		if (this.userInfo == null) {
+//			this.userInfo = new HashSet<UserInfo>();
+//		}
+//		return this.userInfo;
+//	}
 
 	public void setId(int value) {
 		this.id = value;

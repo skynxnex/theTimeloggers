@@ -3,11 +3,27 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.util.Set;
 import java.util.HashSet;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "project_admin_level")
 public class ProjectAdminLevel {
+	
+	@Id
+	@GeneratedValue
 	private int id;
+	
+	@Column(name = "level")
 	private int level;
+	
+	@Column(name = "name")
 	private String name;
-	private Set<UserInProject> userInProject;
+	
+//	private Set<UserInProject> userInProject;
 
 	public int getId() {
 		return this.id;
@@ -21,12 +37,12 @@ public class ProjectAdminLevel {
 		return this.name;
 	}
 
-	public Set<UserInProject> getUserInProject() {
-		if (this.userInProject == null) {
-			this.userInProject = new HashSet<UserInProject>();
-		}
-		return this.userInProject;
-	}
+//	public Set<UserInProject> getUserInProject() {
+//		if (this.userInProject == null) {
+//			this.userInProject = new HashSet<UserInProject>();
+//		}
+//		return this.userInProject;
+//	}
 
 	public void setId(int value) {
 		this.id = value;
