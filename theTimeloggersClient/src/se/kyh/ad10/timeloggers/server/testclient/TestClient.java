@@ -4,10 +4,13 @@ import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RMISecurityManager;
+import java.util.Date;
 import java.util.List;
 import java.util.UUID;
 
+import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.entities.Project;
+import se.kyh.ad10.timeloggers.server.entities.Timelog;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
@@ -32,25 +35,37 @@ public class TestClient {
 			// To get access to PublicInterface we need to use/get an UUID
 			UUID uuid = serverObj.createSession();
 			PublicInterface pii = serverObj.getPublicInterface(uuid);
+			TimeLogDAO tdao = pii.getTimelogDAO();
+			Date date = new Date();
 
-			// Filling up the Project object
-			Project project = new Project();
-			project.setName("TestProject1");
-			project.setEstimatedTime(60);
-			project.setBudget(100000);
+			Project proj = new Project();
+			proj.setName("Hubbabubba");
+			proj.setBudget(10);
+			proj.setEstimatedTime(2000);
+			pii.getProjectDAO().saveProject(proj);
+			
+			
+			// Filling up the object
+			Timelog timelog = new Timelog();
+			timelog.setComment("Detta Šr en kommentar");
+			timelog.setDuration(60);
+			timelog.setTitle("Timelog 1");
+			timelog.setAttendedTimeId(50);
+			timelog.setStart(date);
 
-			// Save
-			pii.getProjectDAO().saveProject(project);
+//			// Save the object
+			tdao.saveTimeLog(timelog);
+			
 
 			// Get all projects and printing them
-			List<Project> projects = pii.getProjectDAO().getAllProjects();
-			System.out.println("Printing list");
-			if(projects.isEmpty()) {
-				System.out.println("List is empty");
-			}
-			for ( Project proj : (List<Project>) projects ) {
-				System.out.println( "Project (" + proj.getName() + ") : " + proj.getBudget() );
-			}
+//			List<Timelog> timelogs = pii.getTimelogDAO().getAllTimelogsForProject(1);
+//			System.out.println("Printing list");
+//			if(timelogs.isEmpty()) {
+//				System.out.println("List is empty");
+//			}
+//			for ( Timelog tl : (List<Timelog>) timelogs ) {
+//				System.out.println( "Timelog (" + tl.getTitle() + ") : " + tl.getDuration() + ":" + tl.getProjectId() );
+//			}
 
 		} catch (IOException e) {
 			e.printStackTrace();

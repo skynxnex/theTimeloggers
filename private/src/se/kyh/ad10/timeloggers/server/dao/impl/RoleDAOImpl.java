@@ -9,7 +9,7 @@ import se.kyh.ad10.timeloggers.server.entities.Role;
 @SuppressWarnings("serial")
 public class RoleDAOImpl extends UnicastRemoteObject implements RoleDAO {
 
-	protected RoleDAOImpl() throws RemoteException {
+	public RoleDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

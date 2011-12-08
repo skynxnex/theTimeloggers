@@ -9,7 +9,7 @@ import se.kyh.ad10.timeloggers.server.entities.ProjectAdminLevel;
 @SuppressWarnings("serial")
 public class ProjetAdminLevelDAOImpl extends UnicastRemoteObject implements  ProjectAdminLevelDAO {
 
-	protected ProjetAdminLevelDAOImpl() throws RemoteException {
+	public ProjetAdminLevelDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

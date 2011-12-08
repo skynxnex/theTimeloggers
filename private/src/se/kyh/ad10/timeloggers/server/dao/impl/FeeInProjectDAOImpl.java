@@ -9,7 +9,7 @@ import se.kyh.ad10.timeloggers.server.entities.FeeInProject;
 @SuppressWarnings("serial")
 public class FeeInProjectDAOImpl extends UnicastRemoteObject implements FeeInProjectDAO {
 
-	protected FeeInProjectDAOImpl() throws RemoteException {
+	public FeeInProjectDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

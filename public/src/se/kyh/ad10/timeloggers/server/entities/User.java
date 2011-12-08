@@ -4,20 +4,54 @@ import java.io.Serializable;
 import java.util.Set;
 import java.util.HashSet;
 
-@SuppressWarnings("serial")
-public class User implements Serializable {
-	private String email;
-	private String firstName;
-	private int id;
-	private Set<UserInfo> info;
-	private String lastName;
-	private String password;
-	private String plainPassword;
-	private Set<SystemAdminLevel> systemAdminLevelImpl;
-	private Set<UserInfo> userInfo;
-	private Set<UserInProject> userInProject;
-	private Set<AttendedTime> userRoleInProjectImpl;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "user")
+public class User implements Serializable {
+	
+	/*---------------------*/
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@Column(name = "email")
+	private String email;
+	
+	@Column(name = "password")
+	private String password;
+	
+	@Column(name = "plain_password")
+	private String plainPassword;
+	
+	@Column(name = "first_name")
+	private String firstName;
+	
+	@Column(name = "last_name")
+	private String lastName;
+	
+	// @Column(name = "")
+//	private Set<UserInfo> info;
+	
+	// @Column(name = "user_id")
+//	private Set<SystemAdminLevel> systemAdminLevelImpl;
+	
+//	@Column(name = "user_id")
+//	private Set<UserInfo> userInfo;
+	
+//	@Column(name = "user_id")
+//	private Set<UserInProject> userInProject;
+	
+//	@Column(name = "user_id")
+//	private Set<AttendedTime> userRoleInProjectImpl;
+	
+	/*---------------------*/
+	
 	public String encryptPassword(String pass) {
 		// TODO implement this operation
 		throw new UnsupportedOperationException("not implemented");
@@ -35,12 +69,12 @@ public class User implements Serializable {
 		return this.id;
 	}
 
-	public Set<UserInfo> getInfo() {
-		if (this.info == null) {
-			this.info = new HashSet<UserInfo>();
-		}
-		return this.info;
-	}
+//	public Set<UserInfo> getInfo() {
+//		if (this.info == null) {
+//			this.info = new HashSet<UserInfo>();
+//		}
+//		return this.info;
+//	}
 
 	public String getLastName() {
 		return lastName;
@@ -54,33 +88,33 @@ public class User implements Serializable {
 		return this.plainPassword;
 	}
 
-	public Set<SystemAdminLevel> getSystemAdminLevelImpl() {
-		if (this.systemAdminLevelImpl == null) {
-			this.systemAdminLevelImpl = new HashSet<SystemAdminLevel>();
-		}
-		return this.systemAdminLevelImpl;
-	}
+//	public Set<SystemAdminLevel> getSystemAdminLevelImpl() {
+//		if (this.systemAdminLevelImpl == null) {
+//			this.systemAdminLevelImpl = new HashSet<SystemAdminLevel>();
+//		}
+//		return this.systemAdminLevelImpl;
+//	}
 
-	public Set<UserInfo> getUserInfo() {
-		if (this.userInfo == null) {
-			this.userInfo = new HashSet<UserInfo>();
-		}
-		return this.userInfo;
-	}
+//	public Set<UserInfo> getUserInfo() {
+//		if (this.userInfo == null) {
+//			this.userInfo = new HashSet<UserInfo>();
+//		}
+//		return this.userInfo;
+//	}
 
-	public Set<UserInProject> getUserInProject() {
-		if (this.userInProject == null) {
-			this.userInProject = new HashSet<UserInProject>();
-		}
-		return this.userInProject;
-	}
+//	public Set<UserInProject> getUserInProject() {
+//		if (this.userInProject == null) {
+//			this.userInProject = new HashSet<UserInProject>();
+//		}
+//		return this.userInProject;
+//	}
 
-	public Set<AttendedTime> getUserRoleInProjectImpl() {
-		if (this.userRoleInProjectImpl == null) {
-			this.userRoleInProjectImpl = new HashSet<AttendedTime>();
-		}
-		return this.userRoleInProjectImpl;
-	}
+//	public Set<AttendedTime> getUserRoleInProjectImpl() {
+//		if (this.userRoleInProjectImpl == null) {
+//			this.userRoleInProjectImpl = new HashSet<AttendedTime>();
+//		}
+//		return this.userRoleInProjectImpl;
+//	}
 
 	public void setEmail(String value) {
 		this.email = value;

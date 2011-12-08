@@ -11,7 +11,7 @@ import se.kyh.ad10.timeloggers.server.entities.CustomerInfo;
 @SuppressWarnings("serial")
 public class CustomerInfoDAOImpl extends UnicastRemoteObject implements CustomerInfoDAO {
 
-	protected CustomerInfoDAOImpl() throws RemoteException {
+	public CustomerInfoDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

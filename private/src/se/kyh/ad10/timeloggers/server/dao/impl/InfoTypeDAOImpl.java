@@ -11,7 +11,7 @@ import se.kyh.ad10.timeloggers.server.entities.InfoType;
 @SuppressWarnings("serial")
 public class InfoTypeDAOImpl extends UnicastRemoteObject implements InfoTypeDAO {
 
-	protected InfoTypeDAOImpl() throws RemoteException {
+	public InfoTypeDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

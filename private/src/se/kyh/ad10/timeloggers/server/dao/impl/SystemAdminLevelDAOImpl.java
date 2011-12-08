@@ -10,7 +10,7 @@ import se.kyh.ad10.timeloggers.server.entities.SystemAdminLevel;
 @SuppressWarnings("serial")
 public class SystemAdminLevelDAOImpl extends UnicastRemoteObject implements SystemAdminLevelDAO {
 
-	protected SystemAdminLevelDAOImpl() throws RemoteException {
+	public SystemAdminLevelDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

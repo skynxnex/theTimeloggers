@@ -10,7 +10,7 @@ import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 @SuppressWarnings("serial")
 public class AttendedTimeDAOImpl extends UnicastRemoteObject implements AttendedTimeDAO {
 
-	protected AttendedTimeDAOImpl() throws RemoteException {
+	public AttendedTimeDAOImpl() throws RemoteException {
 		super();
 		// TODO Auto-generated constructor stub
 	}

@@ -1,19 +1,56 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
+import java.io.Serializable;
 import java.util.Date;
 
-public class Timelog {
-	private int attendedTimeId;
-	private String comment;
-	private int duration;
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "timelog")
+@Embeddable
+public class Timelog implements Serializable {
+
+	/*---------------------*/
+	@Id
+	@GeneratedValue
 	private int id;
-	private Set<Project> project;
-	private int projectId;
+
+	@Column(name = "attendedtime_id")
+	private int attendedTimeId;
+
+	@Column(name = "comment")
+	private String comment;
+
+	@Column(name = "duration")
+	private int duration;
+
+	@ManyToOne
+	@JoinColumn(name = "project_id")
+	@Basic(fetch = FetchType.EAGER)
+	private Project project;
+
+	@Column(name = "start")
 	private Date start;
+
+	@Column(name = "title")
 	private String title;
-	private Set<AttendedTime> userRoleInProject;
+
+	@ManyToOne
+	@JoinColumn(name = "attendedtime_id")
+	@Basic(fetch = FetchType.EAGER)
+	private AttendedTime attendedTime;
+
+	/*---------------------*/
 
 	public int getAttendedTimeId() {
 		return this.attendedTimeId;
@@ -31,30 +68,28 @@ public class Timelog {
 		return this.id;
 	}
 
-	public Set<Project> getProject() {
-		if (this.project == null) {
-			this.project = new HashSet<Project>();
-		}
-		return this.project;
+	public AttendedTime getAttendedTime() {
+		return attendedTime;
 	}
 
-	public int getProjectId() {
-		return this.projectId;
+	public void setAttendedTime(AttendedTime attendedTime) {
+		this.attendedTime = attendedTime;
 	}
 
 	public Date getStart() {
 		return this.start;
 	}
 
-	public String getTitle() {
-		return this.title;
+	public Project getProject() {
+		return project;
 	}
 
-	public Set<AttendedTime> getUserRoleInProject() {
-		if (this.userRoleInProject == null) {
-			this.userRoleInProject = new HashSet<AttendedTime>();
-		}
-		return this.userRoleInProject;
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+	public String getTitle() {
+		return this.title;
 	}
 
 	public void setAttendedTimeId(int value) {
@@ -72,11 +107,7 @@ public class Timelog {
 	public void setId(int value) {
 		this.id = value;
 	}
-
-	public void setProjectId(int value) {
-		this.projectId = value;
-	}
-
+	
 	public void setStart(Date value) {
 		this.start = value;
 	}
