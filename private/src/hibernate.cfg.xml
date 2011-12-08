@@ -29,10 +29,10 @@
   <!-- Database connection settings -->
   <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
   <!-- Fix url this is a example for url with mysql -->
-  <property name="connection.url">jdbc:mysql://31.192.226.120/thetimeloggers</property>
+  <property name="connection.url">jdbc:mysql://localhost:3306/thetimeloggers</property>
   <!-- Add username and password -->
   <property name="connection.username">root</property>
-  <property name="connection.password">thetimeloggers</property>
+  <property name="connection.password">root</property>
   <!-- JDBC connection pool (use the built-in) -->
   <property name="connection.pool_size">10</property>
   <!-- SQL dialect -->

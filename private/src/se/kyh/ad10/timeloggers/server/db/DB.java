@@ -24,25 +24,24 @@ public class DB {
 	private static DB db;
 	
 	private DB(){
-		File configFile = new File("hibernate.cfg.xml");
+		File configFile = new File("src/hibernate.cfg.xml");
     	if( null == sessionFactory){
 	    	
-			Configuration configuration = new Configuration()
-	    															.addAnnotatedClass(User.class)
-	    															.addAnnotatedClass(UserInfo.class)
-	    															.addAnnotatedClass(AttendedTime.class)
-	    															.addAnnotatedClass(Customer.class)
-	    															.addAnnotatedClass(FeeInProject.class)
-	    															.addAnnotatedClass(InfoType.class)
-	    															.addAnnotatedClass(Project.class)
-	    															.addAnnotatedClass(ProjectAdminLevel.class)
-	    															.addAnnotatedClass(Role.class)
-	    															.addAnnotatedClass(SystemAdminLevel.class)
-	    															.addAnnotatedClass(Timelog.class)
-	    															.addAnnotatedClass(UserInProject.class)
-	    															.configure(configFile);
-	    	
-	    	sessionFactory = configuration.buildSessionFactory();
+			sessionFactory = new Configuration()
+							.addAnnotatedClass(User.class)
+							.addAnnotatedClass(UserInfo.class)
+							.addAnnotatedClass(AttendedTime.class)
+							.addAnnotatedClass(Customer.class)
+							.addAnnotatedClass(FeeInProject.class)
+							.addAnnotatedClass(InfoType.class)
+							.addAnnotatedClass(Project.class)
+							.addAnnotatedClass(ProjectAdminLevel.class)
+							.addAnnotatedClass(Role.class)
+							.addAnnotatedClass(SystemAdminLevel.class)
+							.addAnnotatedClass(Timelog.class)
+							.addAnnotatedClass(UserInProject.class)
+	    					.configure(configFile)
+	    					.buildSessionFactory();
     	}
 	}
 	

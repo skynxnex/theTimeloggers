@@ -18,4 +18,6 @@ public interface ProjectDAO extends Remote, Serializable {
    
    public Project getProject(int id) throws RemoteException;
    
+   public List<Project> getAllProjects() throws RemoteException;
+   
    }
