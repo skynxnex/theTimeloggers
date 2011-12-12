@@ -7,6 +7,7 @@ import java.util.List;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.entities.Customer;
 
+@SuppressWarnings("serial")
 public class CustomerDAOImpl extends UnicastRemoteObject implements CustomerDAO {
 
 	public CustomerDAOImpl() throws RemoteException {

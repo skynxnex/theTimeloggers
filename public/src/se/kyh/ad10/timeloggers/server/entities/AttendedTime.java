@@ -1,133 +1,92 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
+import java.io.Serializable;
 
-public class AttendedTime {
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- User
-    *           userRoleInProjectImpl        &lt;       userImpl
-    * </pre>
-    */
-   private Set<User> userImpl;
-   
-   public Set<User> getUserImpl() {
-      if (this.userImpl == null) {
-         this.userImpl = new HashSet<User>();
-      }
-      return this.userImpl;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- User
-    *           userRoleInProjectImpl1        &gt;       userImpl1
-    * </pre>
-    */
-   private Set<User> userImpl1;
-   
-   public Set<User> getUserImpl1() {
-      if (this.userImpl1 == null) {
-         this.userImpl1 = new HashSet<User>();
-      }
-      return this.userImpl1;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- FeeInProject
-    *           userRoleInProject        &lt;       feeInProject
-    * </pre>
-    */
-   private Set<FeeInProject> feeInProject;
-   
-   public Set<FeeInProject> getFeeInProject() {
-      if (this.feeInProject == null) {
-         this.feeInProject = new HashSet<FeeInProject>();
-      }
-      return this.feeInProject;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- FeeInProject
-    *           userRoleInProject1        &gt;       feeInProject1
-    * </pre>
-    */
-   private Set<FeeInProject> feeInProject1;
-   
-   public Set<FeeInProject> getFeeInProject1() {
-      if (this.feeInProject1 == null) {
-         this.feeInProject1 = new HashSet<FeeInProject>();
-      }
-      return this.feeInProject1;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- Timelog
-    *           userRoleInProject        &lt;       timelog
-    * </pre>
-    */
-   private Set<Timelog> timelog;
-   
-   public Set<Timelog> getTimelog() {
-      if (this.timelog == null) {
-         this.timelog = new HashSet<Timelog>();
-      }
-      return this.timelog;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * AttendedTime ------------------------- Timelog
-    *           userRoleInProject1        &gt;       timelog1
-    * </pre>
-    */
-   private Set<Timelog> timelog1;
-   
-   public Set<Timelog> getTimelog1() {
-      if (this.timelog1 == null) {
-         this.timelog1 = new HashSet<Timelog>();
-      }
-      return this.timelog1;
-   }
-   
-   private int userId;
-   
-   public void setUserId(int value) {
-      this.userId = value;
-   }
-   
-   public int getUserId() {
-      return this.userId;
-   }
-   
-   private int feeInProjectId;
-   
-   public void setFeeInProjectId(int value) {
-      this.feeInProjectId = value;
-   }
-   
-   public int getFeeInProjectId() {
-      return this.feeInProjectId;
-   }
-   
-   private int id;
-   
-   public void setId(int value) {
-      this.id = value;
-   }
-   
-   public int getId() {
-      return this.id;
-   }
-   
-   }
+import javax.persistence.Basic;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@SuppressWarnings("serial")
+@Entity
+@Table(name = "attended_time")
+@Embeddable
+public class AttendedTime implements Serializable {
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@ManyToOne
+	@JoinColumn(name = "feeinproject_id")
+	@Basic(fetch = FetchType.EAGER)
+	private FeeInProject feeInProject;
+	
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	@Basic(fetch = FetchType.EAGER)
+	private User user;
+	
+//	private Set<Timelog> timelog;
+//	private Set<FeeInProject> feeInProject;
+//	private Set<User> userImpl;
+
+//	public Set<FeeInProject> getFeeInProject() {
+//		if (this.feeInProject == null) {
+//			this.feeInProject = new HashSet<FeeInProject>();
+//		}
+//		return this.feeInProject;
+//	}
+
+//	public int getFeeInProjectId() {
+//		return this.feeInProjectId;
+//	}
+
+	public int getId() {
+		return this.id;
+	}
+
+//	public Set<Timelog> getTimelog() {
+//		if (this.timelog == null) {
+//			this.timelog = new HashSet<Timelog>();
+//		}
+//		return this.timelog;
+//	}
+
+
+//	public Set<User> getUserImpl() {
+//		if (this.userImpl == null) {
+//			this.userImpl = new HashSet<User>();
+//		}
+//		return this.userImpl;
+//	}
+
+//	public void setFeeInProjectId(int value) {
+//		this.feeInProjectId = value;
+//	}
+
+	public void setId(int value) {
+		this.id = value;
+	}
+
+	public FeeInProject getFeeInProject() {
+		return feeInProject;
+	}
+
+	public void setFeeInProject(FeeInProject feeInProject) {
+		this.feeInProject = feeInProject;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+}

@@ -13,8 +13,6 @@ import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 
 public class ServerEngine {
-
-	private static final long serialVersionUID = 5285516671799841014L;
 	
 	public ServerEngine() throws RemoteException {
 		super();
@@ -41,8 +39,8 @@ public class ServerEngine {
 
        try {
     	   SecurityLayer obj = new SecurityLayerImpl();
-
-           Naming.rebind("TimelogServer", obj);
+    	   
+           Naming.rebind(SecurityLayer.name, obj);
 
            System.out.println("PeerServer bound in registry");
        } catch (Exception e) {

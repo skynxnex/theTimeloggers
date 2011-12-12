@@ -1,9 +1,18 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
-import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class ProjetAdminLevelDAOImpl extends DB implements  ProjectAdminLevelDAO {
+import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
+import se.kyh.ad10.timeloggers.server.entities.ProjectAdminLevel;
+
+@SuppressWarnings("serial")
+public class ProjetAdminLevelDAOImpl extends UnicastRemoteObject implements  ProjectAdminLevelDAO {
+
+	public ProjetAdminLevelDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String getProjectAdminLevelName(int id) {
@@ -12,7 +21,7 @@ public class ProjetAdminLevelDAOImpl extends DB implements  ProjectAdminLevelDAO
 	}
 
 	@Override
-	public boolean saveProjectAdminLevel(String name, int level) {
+	public boolean saveProjectAdminLevel(ProjectAdminLevel projectAdminLevel) {
 		// TODO Auto-generated method stub
 		return false;
 	}

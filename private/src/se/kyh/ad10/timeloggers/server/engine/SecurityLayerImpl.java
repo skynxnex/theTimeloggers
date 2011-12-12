@@ -1,5 +1,6 @@
 package se.kyh.ad10.timeloggers.server.engine;
 import java.rmi.RemoteException;
+import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Collections;
 import java.util.HashMap;
@@ -12,9 +13,6 @@ import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 public class SecurityLayerImpl extends UnicastRemoteObject implements SecurityLayer {
 
-		/**
-	 * 
-	 */
 	private static final long serialVersionUID = 2336179925218126332L;
 	public static Map<UUID, PublicInterface> map;
 

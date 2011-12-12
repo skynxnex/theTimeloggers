@@ -1,9 +1,18 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
-import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class RoleDAOImpl extends DB implements RoleDAO {
+import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
+import se.kyh.ad10.timeloggers.server.entities.Role;
+
+@SuppressWarnings("serial")
+public class RoleDAOImpl extends UnicastRemoteObject implements RoleDAO {
+
+	public RoleDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public String getRoleName(int id) {
@@ -12,7 +21,7 @@ public class RoleDAOImpl extends DB implements RoleDAO {
 	}
 
 	@Override
-	public boolean saveRole(String name) {
+	public boolean saveRole(Role role) {
 		// TODO Auto-generated method stub
 		return false;
 	}

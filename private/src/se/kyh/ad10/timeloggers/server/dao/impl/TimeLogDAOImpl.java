@@ -1,13 +1,23 @@
 package se.kyh.ad10.timeloggers.server.dao.impl;
 
-import java.sql.Date;
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+
+import org.hibernate.HibernateException;
+import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.Timelog;
 
-public class TimeLogDAOImpl extends DB implements TimeLogDAO {
+@SuppressWarnings("serial")
+public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
+
+	public TimeLogDAOImpl() throws RemoteException {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public List<Timelog> getAllTimeLogsForUserInProject(int userId,
@@ -29,9 +39,19 @@ public class TimeLogDAOImpl extends DB implements TimeLogDAO {
 	}
 
 	@Override
-	public boolean saveTimeLog(String title, String comment, int duration, Date start, int projectId, String userId) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean saveTimeLog(Timelog timelog) throws RemoteException {
+		boolean success = false;
+		try {
+			Session dbsession = DB.get().getSession();
+			dbsession.beginTransaction();
+			dbsession.saveOrUpdate(timelog);
+			dbsession.getTransaction().commit();
+			success = dbsession.getTransaction().wasCommitted();
+			dbsession.close();			
+		} catch (HibernateException e) {
+			throw new RemoteException("Database save failed", e);
+		}
+		return success; 
 	}
 
 	@Override
@@ -50,5 +70,14 @@ public class TimeLogDAOImpl extends DB implements TimeLogDAO {
 	public List<Timelog> getAllTimeLogsForUser(int userId) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public List<Timelog> getAllTimelogs() throws RemoteException {
+		Session dbsession = DB.get().getSession();
+		dbsession.beginTransaction();
+		List<Timelog> result = dbsession.createQuery( "from Timelog" ).list();
+		dbsession.getTransaction().commit();
+		dbsession.close();
+		return result;
 	}
 }

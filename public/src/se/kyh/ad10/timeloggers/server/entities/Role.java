@@ -1,59 +1,47 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "role")
+@Embeddable
 public class Role {
-   /**
-    * <pre>
-    *           0..*     0..*
-    * Role ------------------------- FeeInProject
-    *           role        &lt;       feeInProject
-    * </pre>
-    */
-   private Set<FeeInProject> feeInProject;
-   
-   public Set<FeeInProject> getFeeInProject() {
-      if (this.feeInProject == null) {
-         this.feeInProject = new HashSet<FeeInProject>();
-      }
-      return this.feeInProject;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * Role ------------------------- FeeInProject
-    *           role1        &gt;       feeInProject1
-    * </pre>
-    */
-   private Set<FeeInProject> feeInProject1;
-   
-   public Set<FeeInProject> getFeeInProject1() {
-      if (this.feeInProject1 == null) {
-         this.feeInProject1 = new HashSet<FeeInProject>();
-      }
-      return this.feeInProject1;
-   }
-   
-   private int id;
-   
-   public void setId(int value) {
-      this.id = value;
-   }
-   
-   public int getId() {
-      return this.id;
-   }
-   
-   private String name;
-   
-   public void setName(String value) {
-      this.name = value;
-   }
-   
-   public String getName() {
-      return this.name;
-   }
-   
-   }
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@Column(name = "name")
+	private String name;
+	
+//	private Set<FeeInProject> feeInProject;
+
+//	public Set<FeeInProject> getFeeInProject() {
+//		if (this.feeInProject == null) {
+//			this.feeInProject = new HashSet<FeeInProject>();
+//		}
+//		return this.feeInProject;
+//	}
+
+	public int getId() {
+		return this.id;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setId(int value) {
+		this.id = value;
+	}
+
+	public void setName(String value) {
+		this.name = value;
+	}
+
+}

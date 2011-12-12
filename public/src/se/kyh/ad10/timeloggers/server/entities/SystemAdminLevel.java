@@ -1,69 +1,58 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.Set;
-import java.util.HashSet;
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "system_admin_level")
+@Embeddable
 public class SystemAdminLevel {
-   /**
-    * <pre>
-    *           0..*     0..*
-    * SystemAdminLevel ------------------------- User
-    *           systemAdminLevelImpl        &lt;       userImpl
-    * </pre>
-    */
-   private Set<User> userImpl;
-   
-   public Set<User> getUserImpl() {
-      if (this.userImpl == null) {
-         this.userImpl = new HashSet<User>();
-      }
-      return this.userImpl;
-   }
-   
-   /**
-    * <pre>
-    *           0..*     0..*
-    * SystemAdminLevel ------------------------- User
-    *           systemAdminLevelImpl1        &gt;       userImpl1
-    * </pre>
-    */
-   private Set<User> userImpl1;
-   
-   public Set<User> getUserImpl1() {
-      if (this.userImpl1 == null) {
-         this.userImpl1 = new HashSet<User>();
-      }
-      return this.userImpl1;
-   }
-   
-   private int id;
-   
-   public void setId(int value) {
-      this.id = value;
-   }
-   
-   public int getId() {
-      return this.id;
-   }
-   
-   private String name;
-   
-   public void setName(String value) {
-      this.name = value;
-   }
-   
-   public String getName() {
-      return this.name;
-   }
-   
-   private int level;
-   
-   public void setLevel(int value) {
-      this.level = value;
-   }
-   
-   public int getLevel() {
-      return this.level;
-   }
-   
-   }
+	
+	@Id
+	@GeneratedValue
+	private int id;
+	
+	@Column(name = "level")
+	private int level;
+	
+	@Column(name = "name")
+	private String name;
+	
+//	private Set<User> userImpl;
+
+	public int getId() {
+		return this.id;
+	}
+
+	public int getLevel() {
+		return this.level;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+//	public Set<User> getUserImpl() {
+//		if (this.userImpl == null) {
+//			this.userImpl = new HashSet<User>();
+//		}
+//		return this.userImpl;
+//	}
+
+	public void setId(int value) {
+		this.id = value;
+	}
+
+	public void setLevel(int value) {
+		this.level = value;
+	}
+
+	public void setName(String value) {
+		this.name = value;
+	}
+
+}

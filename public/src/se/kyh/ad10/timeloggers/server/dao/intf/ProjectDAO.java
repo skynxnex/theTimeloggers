@@ -14,8 +14,10 @@ public interface ProjectDAO extends Remote, Serializable {
    
    public List<Project> getAllProjectsForCustomer(int projectId, int customerId) throws RemoteException;
    
-   public boolean saveProject(String name, int budget, int estimatedTime, int customerId) throws RemoteException;
+   public boolean saveProject(Project project) throws RemoteException;
    
    public Project getProject(int id) throws RemoteException;
+   
+   public List<Project> getAllProjects() throws RemoteException;
    
    }

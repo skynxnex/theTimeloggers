@@ -9,17 +9,35 @@ public final class PublicInterfaceImpl_Stub
 {
     private static final long serialVersionUID = 2;
     
-    private static java.lang.reflect.Method $method_getCustomerDAO_0;
-    private static java.lang.reflect.Method $method_getProjectDAO_1;
-    private static java.lang.reflect.Method $method_getUserDAO_2;
-    private static java.lang.reflect.Method $method_getUserInfoDAO_3;
+    private static java.lang.reflect.Method $method_getAttendedTimeDAO_0;
+    private static java.lang.reflect.Method $method_getCustomerDAO_1;
+    private static java.lang.reflect.Method $method_getCustomerInfoDAO_2;
+    private static java.lang.reflect.Method $method_getFeeInProjectDAO_3;
+    private static java.lang.reflect.Method $method_getInfoTypeDAO_4;
+    private static java.lang.reflect.Method $method_getProjectAdminLevelDAO_5;
+    private static java.lang.reflect.Method $method_getProjectDAO_6;
+    private static java.lang.reflect.Method $method_getRoleDAO_7;
+    private static java.lang.reflect.Method $method_getSystemAdminLevelDAO_8;
+    private static java.lang.reflect.Method $method_getTimelogDAO_9;
+    private static java.lang.reflect.Method $method_getUserDAO_10;
+    private static java.lang.reflect.Method $method_getUserInProjectDAO_11;
+    private static java.lang.reflect.Method $method_getUserInfoDAO_12;
     
     static {
 	try {
-	    $method_getCustomerDAO_0 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getCustomerDAO", new java.lang.Class[] {});
-	    $method_getProjectDAO_1 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getProjectDAO", new java.lang.Class[] {});
-	    $method_getUserDAO_2 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getUserDAO", new java.lang.Class[] {});
-	    $method_getUserInfoDAO_3 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getUserInfoDAO", new java.lang.Class[] {});
+	    $method_getAttendedTimeDAO_0 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getAttendedTimeDAO", new java.lang.Class[] {});
+	    $method_getCustomerDAO_1 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getCustomerDAO", new java.lang.Class[] {});
+	    $method_getCustomerInfoDAO_2 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getCustomerInfoDAO", new java.lang.Class[] {});
+	    $method_getFeeInProjectDAO_3 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getFeeInProjectDAO", new java.lang.Class[] {});
+	    $method_getInfoTypeDAO_4 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getInfoTypeDAO", new java.lang.Class[] {});
+	    $method_getProjectAdminLevelDAO_5 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getProjectAdminLevelDAO", new java.lang.Class[] {});
+	    $method_getProjectDAO_6 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getProjectDAO", new java.lang.Class[] {});
+	    $method_getRoleDAO_7 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getRoleDAO", new java.lang.Class[] {});
+	    $method_getSystemAdminLevelDAO_8 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getSystemAdminLevelDAO", new java.lang.Class[] {});
+	    $method_getTimelogDAO_9 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getTimelogDAO", new java.lang.Class[] {});
+	    $method_getUserDAO_10 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getUserDAO", new java.lang.Class[] {});
+	    $method_getUserInProjectDAO_11 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getUserInProjectDAO", new java.lang.Class[] {});
+	    $method_getUserInfoDAO_12 = se.kyh.ad10.timeloggersPublic.server.PublicInterface.class.getMethod("getUserInfoDAO", new java.lang.Class[] {});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
 		"stub class initialization failed");
@@ -33,13 +51,93 @@ public final class PublicInterfaceImpl_Stub
     
     // methods from remote interfaces
     
+    // implementation of getAttendedTimeDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO getAttendedTimeDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getAttendedTimeDAO_0, null, -2916328812806476500L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
     // implementation of getCustomerDAO()
     public se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO getCustomerDAO()
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_getCustomerDAO_0, null, -7184050386370750675L);
+	    Object $result = ref.invoke(this, $method_getCustomerDAO_1, null, -7184050386370750675L);
 	    return ((se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getCustomerInfoDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO getCustomerInfoDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getCustomerInfoDAO_2, null, -2975638285511353096L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getFeeInProjectDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO getFeeInProjectDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getFeeInProjectDAO_3, null, 5637755023429483805L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getInfoTypeDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.InfoTypeDAO getInfoTypeDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getInfoTypeDAO_4, null, 963318290670663336L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.InfoTypeDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getProjectAdminLevelDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO getProjectAdminLevelDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getProjectAdminLevelDAO_5, null, 9146790059660764043L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {
@@ -54,8 +152,56 @@ public final class PublicInterfaceImpl_Stub
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_getProjectDAO_1, null, 1954847168785850462L);
+	    Object $result = ref.invoke(this, $method_getProjectDAO_6, null, 1954847168785850462L);
 	    return ((se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getRoleDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO getRoleDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getRoleDAO_7, null, -3059944044304128495L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getSystemAdminLevelDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.SystemAdminLevelDAO getSystemAdminLevelDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getSystemAdminLevelDAO_8, null, -3614918683145962494L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.SystemAdminLevelDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getTimelogDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO getTimelogDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getTimelogDAO_9, null, -1607830161797680406L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {
@@ -70,8 +216,24 @@ public final class PublicInterfaceImpl_Stub
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_getUserDAO_2, null, -6286218070247480195L);
+	    Object $result = ref.invoke(this, $method_getUserDAO_10, null, -6286218070247480195L);
 	    return ((se.kyh.ad10.timeloggers.server.dao.intf.UserDAO) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
+    // implementation of getUserInProjectDAO()
+    public se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO getUserInProjectDAO()
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getUserInProjectDAO_11, null, 7538999175502542365L);
+	    return ((se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {
@@ -86,7 +248,7 @@ public final class PublicInterfaceImpl_Stub
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_getUserInfoDAO_3, null, 1534422575161262167L);
+	    Object $result = ref.invoke(this, $method_getUserInfoDAO_12, null, 1534422575161262167L);
 	    return ((se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
