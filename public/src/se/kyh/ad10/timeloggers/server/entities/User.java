@@ -1,12 +1,16 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -34,6 +38,10 @@ public class User implements Serializable {
 	
 	@Column(name = "last_name")
 	private String lastName;
+	
+	@OneToMany
+	@Basic(fetch = FetchType.EAGER)
+	private List<AttendedTime> attendedTimes;
 	
 	// @Column(name = "")
 //	private Set<UserInfo> info;
@@ -138,6 +146,14 @@ public class User implements Serializable {
 
 	public void setPlainPassword(String value) {
 		this.plainPassword = value;
+	}
+
+	public List<AttendedTime> getAttendedTimes() {
+		return attendedTimes;
+	}
+
+	public void setAttendedTimes(List<AttendedTime> attendedTimes) {
+		this.attendedTimes = attendedTimes;
 	}
 
 }
