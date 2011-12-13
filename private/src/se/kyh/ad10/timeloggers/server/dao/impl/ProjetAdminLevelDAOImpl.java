@@ -2,16 +2,19 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
 import se.kyh.ad10.timeloggers.server.entities.ProjectAdminLevel;
 
 @SuppressWarnings("serial")
 public class ProjetAdminLevelDAOImpl extends UnicastRemoteObject implements  ProjectAdminLevelDAO {
+	
+	private UUID uuid;
 
-	public ProjetAdminLevelDAOImpl() throws RemoteException {
+	public ProjetAdminLevelDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	@Override
@@ -24,5 +27,13 @@ public class ProjetAdminLevelDAOImpl extends UnicastRemoteObject implements  Pro
 	public boolean saveProjectAdminLevel(ProjectAdminLevel projectAdminLevel) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 }

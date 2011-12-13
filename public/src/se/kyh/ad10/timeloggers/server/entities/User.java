@@ -3,13 +3,13 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -39,8 +39,8 @@ public class User implements Serializable {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	@OneToMany
-	@Basic(fetch = FetchType.EAGER)
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
 	private List<AttendedTime> attendedTimes;
 	
 	// @Column(name = "")

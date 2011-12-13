@@ -2,14 +2,18 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.UUID;
+
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO;
 
 @SuppressWarnings("serial")
 public class UserInProjectDAOImpl extends UnicastRemoteObject implements UserInProjectDAO {
+	
+	private UUID uuid;
 
-	protected UserInProjectDAOImpl() throws RemoteException {
+	public UserInProjectDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	@Override
@@ -23,5 +27,13 @@ public class UserInProjectDAOImpl extends UnicastRemoteObject implements UserInP
 	public boolean removeUserFromProject(int id) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 }

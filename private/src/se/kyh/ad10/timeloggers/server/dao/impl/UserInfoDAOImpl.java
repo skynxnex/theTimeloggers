@@ -5,16 +5,19 @@ import java.rmi.server.UnicastRemoteObject;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
 import se.kyh.ad10.timeloggers.server.entities.UserInfo;
 
 @SuppressWarnings("serial")
 public class UserInfoDAOImpl extends UnicastRemoteObject implements UserInfoDAO {
+	
+	private UUID uuid;
 
-	protected UserInfoDAOImpl() throws RemoteException {
+	public UserInfoDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	private Set<UserInfo> userInfo;
@@ -42,6 +45,14 @@ public class UserInfoDAOImpl extends UnicastRemoteObject implements UserInfoDAO 
 	public boolean saveUserInfo(UserInfo userInfo) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 
 }

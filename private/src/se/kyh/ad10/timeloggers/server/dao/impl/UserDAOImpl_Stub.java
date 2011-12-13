@@ -109,11 +109,12 @@ public final class UserDAOImpl_Stub
     }
     
     // implementation of getUserById(int)
-    public void getUserById(int $param_int_1)
+    public se.kyh.ad10.timeloggers.server.entities.User getUserById(int $param_int_1)
 	throws java.rmi.RemoteException
     {
 	try {
-	    ref.invoke(this, $method_getUserById_4, new java.lang.Object[] {new java.lang.Integer($param_int_1)}, -1339536548632276534L);
+	    Object $result = ref.invoke(this, $method_getUserById_4, new java.lang.Object[] {new java.lang.Integer($param_int_1)}, -8897046412658324667L);
+	    return ((se.kyh.ad10.timeloggers.server.entities.User) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
 	} catch (java.rmi.RemoteException e) {

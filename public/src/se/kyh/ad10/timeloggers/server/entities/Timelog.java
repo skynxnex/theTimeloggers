@@ -43,7 +43,6 @@ public class Timelog implements Serializable {
 	private String title;
 
 	@ManyToOne
-	@JoinColumn(name = "attendedtime_id")
 	@Basic(fetch = FetchType.EAGER)
 	private AttendedTime attendedTime;
 

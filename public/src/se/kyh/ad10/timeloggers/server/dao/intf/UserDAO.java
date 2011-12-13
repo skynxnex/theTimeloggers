@@ -11,7 +11,7 @@ import se.kyh.ad10.timeloggers.server.entities.User;
 
 public interface UserDAO extends Remote, Serializable {
 	
-   public void getUserById(int id) throws RemoteException;
+   public User getUserById(int id) throws RemoteException;
    
    public User login(String email, String password) throws RemoteException;
    

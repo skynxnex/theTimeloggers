@@ -22,13 +22,12 @@ public class AttendedTime implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "feeinproject_id")
-	@Basic(fetch = FetchType.EAGER)
 	private FeeInProject feeInProject;
 	
-	@ManyToOne
-	@Basic(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
 	private User user;
 	
 //	private Set<Timelog> timelog;
