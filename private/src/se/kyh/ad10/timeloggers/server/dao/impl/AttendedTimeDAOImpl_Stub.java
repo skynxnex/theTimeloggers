@@ -10,14 +10,16 @@ public final class AttendedTimeDAOImpl_Stub
     private static final long serialVersionUID = 2;
     
     private static java.lang.reflect.Method $method_deleteAttendedTime_0;
-    private static java.lang.reflect.Method $method_listAll_1;
-    private static java.lang.reflect.Method $method_saveAttendedTime_2;
+    private static java.lang.reflect.Method $method_getAttendedTime_1;
+    private static java.lang.reflect.Method $method_listAll_2;
+    private static java.lang.reflect.Method $method_saveAttendedTime_3;
     
     static {
 	try {
 	    $method_deleteAttendedTime_0 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("deleteAttendedTime", new java.lang.Class[] {int.class});
-	    $method_listAll_1 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("listAll", new java.lang.Class[] {});
-	    $method_saveAttendedTime_2 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("saveAttendedTime", new java.lang.Class[] {se.kyh.ad10.timeloggers.server.entities.AttendedTime.class});
+	    $method_getAttendedTime_1 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("getAttendedTime", new java.lang.Class[] {int.class});
+	    $method_listAll_2 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("listAll", new java.lang.Class[] {});
+	    $method_saveAttendedTime_3 = se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO.class.getMethod("saveAttendedTime", new java.lang.Class[] {se.kyh.ad10.timeloggers.server.entities.AttendedTime.class});
 	} catch (java.lang.NoSuchMethodException e) {
 	    throw new java.lang.NoSuchMethodError(
 		"stub class initialization failed");
@@ -47,12 +49,28 @@ public final class AttendedTimeDAOImpl_Stub
 	}
     }
     
+    // implementation of getAttendedTime(int)
+    public se.kyh.ad10.timeloggers.server.entities.AttendedTime getAttendedTime(int $param_int_1)
+	throws java.rmi.RemoteException
+    {
+	try {
+	    Object $result = ref.invoke(this, $method_getAttendedTime_1, new java.lang.Object[] {new java.lang.Integer($param_int_1)}, 4080204821171499309L);
+	    return ((se.kyh.ad10.timeloggers.server.entities.AttendedTime) $result);
+	} catch (java.lang.RuntimeException e) {
+	    throw e;
+	} catch (java.rmi.RemoteException e) {
+	    throw e;
+	} catch (java.lang.Exception e) {
+	    throw new java.rmi.UnexpectedException("undeclared checked exception", e);
+	}
+    }
+    
     // implementation of listAll()
     public java.util.List listAll()
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_listAll_1, null, 6533839432292156899L);
+	    Object $result = ref.invoke(this, $method_listAll_2, null, 6533839432292156899L);
 	    return ((java.util.List) $result);
 	} catch (java.lang.RuntimeException e) {
 	    throw e;
@@ -68,7 +86,7 @@ public final class AttendedTimeDAOImpl_Stub
 	throws java.rmi.RemoteException
     {
 	try {
-	    Object $result = ref.invoke(this, $method_saveAttendedTime_2, new java.lang.Object[] {$param_AttendedTime_1}, 2968675187569999478L);
+	    Object $result = ref.invoke(this, $method_saveAttendedTime_3, new java.lang.Object[] {$param_AttendedTime_1}, 2968675187569999478L);
 	    return ((java.lang.Boolean) $result).booleanValue();
 	} catch (java.lang.RuntimeException e) {
 	    throw e;

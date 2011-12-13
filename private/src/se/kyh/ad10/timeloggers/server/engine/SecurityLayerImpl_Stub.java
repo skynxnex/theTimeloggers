@@ -5,7 +5,7 @@ package se.kyh.ad10.timeloggers.server.engine;
 
 public final class SecurityLayerImpl_Stub
     extends java.rmi.server.RemoteStub
-    implements se.kyh.ad10.timeloggersPublic.server.SecurityLayer, java.rmi.Remote
+    implements se.kyh.ad10.timeloggersPublic.server.SecurityLayer
 {
     private static final long serialVersionUID = 2;
     

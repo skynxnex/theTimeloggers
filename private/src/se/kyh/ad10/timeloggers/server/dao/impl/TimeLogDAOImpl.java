@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -13,15 +14,16 @@ import se.kyh.ad10.timeloggers.server.entities.Timelog;
 
 @SuppressWarnings("serial")
 public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
+	
+	private UUID uuid;
 
-	public TimeLogDAOImpl() throws RemoteException {
+	public TimeLogDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	@Override
-	public List<Timelog> getAllTimeLogsForUserInProject(int userId,
-			int projectId) {
+	public List<Timelog> getAllTimeLogsForUserInProject(int userId, int projectId) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -47,7 +49,6 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 			dbsession.saveOrUpdate(timelog);
 			dbsession.getTransaction().commit();
 			success = dbsession.getTransaction().wasCommitted();
-			dbsession.close();			
 		} catch (HibernateException e) {
 			throw new RemoteException("Database save failed", e);
 		}
@@ -68,7 +69,7 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 
 	@Override
 	public List<Timelog> getAllTimeLogsForUser(int userId) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 	
@@ -77,7 +78,14 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 		dbsession.beginTransaction();
 		List<Timelog> result = dbsession.createQuery( "from Timelog" ).list();
 		dbsession.getTransaction().commit();
-		dbsession.close();
 		return result;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 }

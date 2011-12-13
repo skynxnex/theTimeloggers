@@ -128,4 +128,3 @@ public class User implements Serializable {
 	public List<AttendedTime> getAttendedTime() {
 		return this.attendedTime;
 	}
-}

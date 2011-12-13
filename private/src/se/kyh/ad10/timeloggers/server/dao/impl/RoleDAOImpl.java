@@ -2,16 +2,19 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
 import se.kyh.ad10.timeloggers.server.entities.Role;
 
 @SuppressWarnings("serial")
 public class RoleDAOImpl extends UnicastRemoteObject implements RoleDAO {
+	
+	private UUID uuid;
 
-	public RoleDAOImpl() throws RemoteException {
+	public RoleDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	@Override
@@ -30,5 +33,13 @@ public class RoleDAOImpl extends UnicastRemoteObject implements RoleDAO {
 	public boolean deleteRole(int id) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 }

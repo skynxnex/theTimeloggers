@@ -1,7 +1,5 @@
 package se.kyh.ad10.timeloggers.server.engine;
 import java.rmi.RemoteException;
-import java.rmi.registry.Registry;
-import java.rmi.server.UnicastRemoteObject;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
@@ -11,10 +9,10 @@ import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 
-public class SecurityLayerImpl extends UnicastRemoteObject implements SecurityLayer {
+public class SecurityLayerImpl implements SecurityLayer {
 
 	private static final long serialVersionUID = 2336179925218126332L;
-	public static Map<UUID, PublicInterface> map;
+	private static Map<UUID, PublicInterface> map;
 
 	protected SecurityLayerImpl() throws RemoteException {
 		super();
@@ -32,8 +30,16 @@ public class SecurityLayerImpl extends UnicastRemoteObject implements SecurityLa
 	@Override
 	public UUID createSession() throws RemoteException {
 		UUID sessionId = UUID.randomUUID();
-		PublicInterfaceImpl pii = new PublicInterfaceImpl();
+		PublicInterfaceImpl pii = new PublicInterfaceImpl(sessionId);
 		map.put(sessionId, pii);
+		System.out.println(sessionId);
+		System.out.println(map);
 		return sessionId;
+	}
+	
+	public static PublicInterfaceImpl getPublicInterfaceImpl(UUID sessionID) {
+		System.out.println(map);
+		System.out.println(sessionID);
+		return (PublicInterfaceImpl) map.get(sessionID);
 	}
 }

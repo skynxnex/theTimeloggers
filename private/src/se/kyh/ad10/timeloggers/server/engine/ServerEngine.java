@@ -4,7 +4,9 @@ import java.rmi.Naming;
 import java.rmi.RMISecurityManager;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
+import java.rmi.server.UnicastRemoteObject;
 
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 /**
@@ -39,13 +41,16 @@ public class ServerEngine {
 
        try {
     	   SecurityLayer obj = new SecurityLayerImpl();
-    	   
+    	   UnicastRemoteObject.exportObject(obj, 443);
            Naming.rebind(SecurityLayer.name, obj);
 
            System.out.println("PeerServer bound in registry");
        } catch (Exception e) {
            System.err.println("RMI server exception:" + e);
            e.printStackTrace();
+       }
+       if(DB.get().getSession() != null) {
+    	   System.out.println("DB session started");    	   
        }
        System.out.println("Server started OK");
    }

@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.dao.impl;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.List;
+import java.util.UUID;
 
 import org.hibernate.Session;
 
@@ -12,10 +13,12 @@ import se.kyh.ad10.timeloggers.server.entities.Project;
 
 @SuppressWarnings("serial")
 public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
+	
+	private UUID uuid;
 
-	public ProjectDAOImpl() throws RemoteException {
+	public ProjectDAOImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		this.setUuid(uuid);
 	}
 
 	@Override
@@ -56,5 +59,13 @@ public class ProjectDAOImpl extends UnicastRemoteObject implements ProjectDAO {
 		dbsession.getTransaction().commit();
 		dbsession.close();
 		return result;
+	}
+
+	public UUID getUuid() {
+		return uuid;
+	}
+
+	public void setUuid(UUID uuid) {
+		this.uuid = uuid;
 	}
 }

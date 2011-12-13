@@ -4,6 +4,8 @@ import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.UUID;
 
+import org.hibernate.Session;
+
 import se.kyh.ad10.timeloggers.server.dao.impl.AttendedTimeDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerInfoDAOImpl;
@@ -15,6 +17,8 @@ import se.kyh.ad10.timeloggers.server.dao.impl.RoleDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.SystemAdminLevelDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.TimeLogDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.UserDAOImpl;
+import se.kyh.ad10.timeloggers.server.dao.impl.UserInProjectDAOImpl;
+import se.kyh.ad10.timeloggers.server.dao.impl.UserInfoDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO;
@@ -28,13 +32,14 @@ import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.entities.User;
 import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 
 @SuppressWarnings("serial")
 public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicInterface {
 
-
+	private Session session;
 	private int userId;
 	public String email;
 	public String password;
@@ -42,9 +47,10 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 	public int adminLevel;
 
 
-	protected PublicInterfaceImpl() throws RemoteException {
+	protected PublicInterfaceImpl(UUID uuid) throws RemoteException {
 		super();
-		// TODO Auto-generated constructor stub
+		setUUID(uuid);
+		this.session = DB.get().getSessionFactory().openSession();
 	}
 
 	public User doLogin(UUID uuid) {
@@ -54,29 +60,29 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 
 	@Override
 	public UserDAO getUserDAO() throws RemoteException {
-		UserDAO obj = new UserDAOImpl();
+		UserDAO obj = new UserDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public UserInfoDAO getUserInfoDAO() throws RemoteException {
-		// TODO Auto-generated method stub
-		return null;
+		UserInfoDAO obj = new UserInfoDAOImpl(uuid);
+		return obj;
 	}
 
 	@Override
 	public CustomerDAO getCustomerDAO() throws RemoteException {
-		CustomerDAO obj = new CustomerDAOImpl();
+		CustomerDAO obj = new CustomerDAOImpl(uuid);
 		return obj;
 	}
 
-	public void setUUID(UUID uuid2) {
-		this.uuid = uuid2;
+	public void setUUID(UUID uuid) {
+		this.uuid = uuid;
 	}
 
 	@Override
 	public ProjectDAO getProjectDAO() throws RemoteException {
-		ProjectDAO obj = new ProjectDAOImpl();
+		ProjectDAO obj = new ProjectDAOImpl(uuid);
 		return obj;
 	}
 
@@ -90,55 +96,60 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 
 	@Override
 	public AttendedTimeDAO getAttendedTimeDAO() throws RemoteException {
-		AttendedTimeDAO obj = new AttendedTimeDAOImpl();
+		AttendedTimeDAO obj = new AttendedTimeDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public CustomerInfoDAO getCustomerInfoDAO() throws RemoteException {
-		CustomerInfoDAO obj = new CustomerInfoDAOImpl();
+		CustomerInfoDAO obj = new CustomerInfoDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public FeeInProjectDAO getFeeInProjectDAO() throws RemoteException {
-		FeeInProjectDAO obj = new FeeInProjectDAOImpl();
+		FeeInProjectDAO obj = new FeeInProjectDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public InfoTypeDAO getInfoTypeDAO() throws RemoteException {
-		InfoTypeDAO obj = new InfoTypeDAOImpl();
+		InfoTypeDAO obj = new InfoTypeDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public ProjectAdminLevelDAO getProjectAdminLevelDAO()
 			throws RemoteException {
-		ProjectAdminLevelDAO obj = new ProjetAdminLevelDAOImpl();
+		ProjectAdminLevelDAO obj = new ProjetAdminLevelDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public RoleDAO getRoleDAO() throws RemoteException {
-		RoleDAO obj = new RoleDAOImpl();
+		RoleDAO obj = new RoleDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public SystemAdminLevelDAO getSystemAdminLevelDAO() throws RemoteException {
-		SystemAdminLevelDAO obj = new SystemAdminLevelDAOImpl();
+		SystemAdminLevelDAO obj = new SystemAdminLevelDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public TimeLogDAO getTimelogDAO() throws RemoteException {
-		TimeLogDAO obj = new TimeLogDAOImpl();
+		TimeLogDAO obj = new TimeLogDAOImpl(uuid);
 		return obj;
 	}
 
 	@Override
 	public UserInProjectDAO getUserInProjectDAO() throws RemoteException {
-		return null;
+		UserInProjectDAO obj = new UserInProjectDAOImpl(uuid);
+		return obj;
+	}
+
+	public Session getSession() {
+		return session;
 	}
 }

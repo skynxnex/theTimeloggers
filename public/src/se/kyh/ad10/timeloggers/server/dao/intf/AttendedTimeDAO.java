@@ -15,4 +15,6 @@ public interface AttendedTimeDAO extends Remote, Serializable {
    
    public boolean deleteAttendedTime(int id) throws RemoteException;
    
+   public AttendedTime getAttendedTime(int id) throws RemoteException;
+   
    }
