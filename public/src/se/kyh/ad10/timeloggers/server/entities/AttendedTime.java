@@ -28,7 +28,6 @@ public class AttendedTime implements Serializable {
 	private FeeInProject feeInProject;
 	
 	@ManyToOne
-	@JoinColumn(name = "user_id")
 	@Basic(fetch = FetchType.EAGER)
 	private User user;
 	
