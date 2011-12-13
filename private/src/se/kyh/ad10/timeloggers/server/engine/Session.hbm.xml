@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2011 2:35:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="se.kyh.ad10.timeloggers.server.engine.Session" table="SESSION">
+        <id name="UUID" type="int">
+            <column name="UUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="int">
+            <column name="USERID" />
+        </property>
+        <property name="clientId" type="int">
+            <column name="CLIENTID" />
+        </property>
+        <many-to-one name="publicInterface" class="se.kyh.ad10.timeloggersPublic.server.PublicInterface" fetch="join">
+            <column name="PUBLICINTERFACE" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

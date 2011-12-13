@@ -1,10 +1,15 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -18,45 +23,36 @@ public class InfoType {
 	
 	@Column(name = "name")
 	private String name;
-//	private Set<CustomerInfo> customerInfoImpl;
-//	private Set<UserInfo> info;
-//	private Set<UserInfo> userInfo;
-
-//	public Set<CustomerInfo> getCustomerInfoImpl() {
-//		if (this.customerInfoImpl == null) {
-//			this.customerInfoImpl = new HashSet<CustomerInfo>();
-//		}
-//		return this.customerInfoImpl;
-//	}
+	
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinColumn
+	private List<UserInfo> userInfo;
+	
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinColumn
+	private List<CustomerInfo> customerInfo;
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
-//	public Set<UserInfo> getInfo() {
-//		if (this.info == null) {
-//			this.info = new HashSet<UserInfo>();
-//		}
-//		return this.info;
-//	}
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
-//	public Set<UserInfo> getUserInfo() {
-//		if (this.userInfo == null) {
-//			this.userInfo = new HashSet<UserInfo>();
-//		}
-//		return this.userInfo;
-//	}
-
-	public void setId(int value) {
-		this.id = value;
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public List<UserInfo> getUserInfo() {
+		return this.userInfo;
 	}
 
-	public void setName(String value) {
-		this.name = value;
+	public List<CustomerInfo> getCustomerInfo() {
+		return this.customerInfo;
 	}
-
 }

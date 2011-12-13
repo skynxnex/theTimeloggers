@@ -2,6 +2,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -31,11 +32,6 @@ public class Timelog implements Serializable {
 	@Column(name = "duration")
 	private int duration;
 
-	@ManyToOne
-	@JoinColumn(name = "project_id")
-	@Basic(fetch = FetchType.EAGER)
-	private Project project;
-
 	@Column(name = "start")
 	private Date start;
 
@@ -43,66 +39,61 @@ public class Timelog implements Serializable {
 	private String title;
 
 	@ManyToOne
+	@JoinColumn(name = "project_id")
+	@Basic(fetch = FetchType.EAGER)
+	private List<Project> project;
+
+	@ManyToOne
 	@JoinColumn(name = "attendedtime_id")
 	@Basic(fetch = FetchType.EAGER)
-	private AttendedTime attendedTime;
+	private List<AttendedTime> attendedTime;
 
-	/*---------------------*/
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getComment() {
-		return this.comment;
+		return comment;
+	}
+
+	public void setComment(String comment) {
+		this.comment = comment;
 	}
 
 	public int getDuration() {
-		return this.duration;
+		return duration;
 	}
 
-	public int getId() {
-		return this.id;
-	}
-
-	public AttendedTime getAttendedTime() {
-		return attendedTime;
-	}
-
-	public void setAttendedTime(AttendedTime attendedTime) {
-		this.attendedTime = attendedTime;
+	public void setDuration(int duration) {
+		this.duration = duration;
 	}
 
 	public Date getStart() {
-		return this.start;
+		return start;
 	}
 
-	public Project getProject() {
-		return project;
-	}
-
-	public void setProject(Project project) {
-		this.project = project;
+	public void setStart(Date start) {
+		this.start = start;
 	}
 
 	public String getTitle() {
-		return this.title;
+		return title;
 	}
 
-	public void setComment(String value) {
-		this.comment = value;
-	}
-
-	public void setDuration(int value) {
-		this.duration = value;
-	}
-
-	public void setId(int value) {
-		this.id = value;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 	
-	public void setStart(Date value) {
-		this.start = value;
+	public List<Project> getProject() {
+		return this.project;
 	}
-
-	public void setTitle(String value) {
-		this.title = value;
+	
+	public List<AttendedTime> getAttendedTime() {
+		return this.attendedTime;
 	}
-
+	
 }

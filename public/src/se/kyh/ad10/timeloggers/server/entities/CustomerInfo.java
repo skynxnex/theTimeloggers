@@ -1,5 +1,7 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -20,75 +22,38 @@ public class CustomerInfo {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
-	@JoinColumn(name = "customer_id")
-	@Basic(fetch = FetchType.EAGER)
-	private Customer customer;
-	
 	@Column(name = "value")
 	private String value;
-	
-	@ManyToOne
-	@JoinColumn(name = "infotype_id")
-	@Basic(fetch = FetchType.EAGER)
-	private InfoType infoType;
-	
-//	private Set<Customer> customer;
-//	private Set<InfoType> infoTypeImpl;
-	
 
-//	public Set<Customer> getCustomer() {
-//		if (this.customer == null) {
-//			this.customer = new HashSet<Customer>();
-//		}
-//		return this.customer;
-//	}
-
-
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<Customer> customer;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<InfoType> infoType;
 
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
-
-//	public Set<InfoType> getInfoTypeImpl() {
-//		if (this.infoTypeImpl == null) {
-//			this.infoTypeImpl = new HashSet<InfoType>();
-//		}
-//		return this.infoTypeImpl;
-//	}
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getValue() {
-		return this.value;
+		return value;
 	}
-
-	public void setId(int value) {
-		this.id = value;
-	}
-
 
 	public void setValue(String value) {
 		this.value = value;
 	}
-
-
-	public Customer getCustomer() {
-		return customer;
+	
+	public List<Customer> getCustomer() {
+		return this.customer;
 	}
 
-
-	public void setCustomer(Customer customer) {
-		this.customer = customer;
+	public List<InfoType> getInfoTypeImpl() {
+		return this.infoType;
 	}
-
-
-	public InfoType getInfoType() {
-		return infoType;
-	}
-
-
-	public void setInfoType(InfoType infoType) {
-		this.infoType = infoType;
-	}
-
 }

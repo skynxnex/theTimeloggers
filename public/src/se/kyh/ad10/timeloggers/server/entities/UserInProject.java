@@ -1,5 +1,8 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+import java.util.Set;
+
 import javax.persistence.Basic;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -19,79 +22,36 @@ public class UserInProject {
 	@GeneratedValue
 	private int id;
 
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "project_admin_level_id")
-	@Basic(fetch = FetchType.EAGER)
-	private ProjectAdminLevel projectAdminLevel;
+	private List<ProjectAdminLevel> projectAdminLevel;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "project_id")
-	@Basic(fetch = FetchType.EAGER)
-	private Project project;
+	private List<Project> project;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
-	@Basic(fetch = FetchType.EAGER)
-	private User user;
-
-//	private Set<User> user;
-//	private Set<Project> project;
-//	private Set<ProjectAdminLevel> projectAdminLevel;
+	private List<User> user;
 	
 	public int getId() {
 		return this.id;
 	}
 
-//	public Set<Project> getProject() {
-//		if (this.project == null) {
-//			this.project = new HashSet<Project>();
-//		}
-//		return this.project;
-//	}
-
-//	public Set<ProjectAdminLevel> getProjectAdminLevel() {
-//		if (this.projectAdminLevel == null) {
-//			this.projectAdminLevel = new HashSet<ProjectAdminLevel>();
-//		}
-//		return this.projectAdminLevel;
-//	}
-
-//	public Set<User> getUser() {
-//		if (this.user == null) {
-//			this.user = new HashSet<User>();
-//		}
-//		return this.user;
-//	}
-
 	public void setId(int value) {
 		this.id = value;
 	}
-
-	public ProjectAdminLevel getProjectAdminLevel() {
-		return projectAdminLevel;
+	
+	public List<ProjectAdminLevel> getProjectAdminLevel() {
+		return this.projectAdminLevel;
 	}
 
-	public void setProjectAdminLevel(ProjectAdminLevel projectAdminLevel) {
-		this.projectAdminLevel = projectAdminLevel;
+	public List <Project> getProject() {
+		return this.project;
 	}
 
-	public Project getProject() {
-		return project;
+	public List <User> getUser() {
+		return this.user;
 	}
-
-	public void setProject(Project project) {
-		this.project = project;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
-	}
-
-//	public void setProjectAdminLevelId(int value) {
-//		this.projectAdminLevelId = value;
-//	}
 }
+ 

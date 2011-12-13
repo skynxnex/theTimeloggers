@@ -1,12 +1,17 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -30,7 +35,23 @@ public class Project implements Serializable {
 	@Column(name = "estimated_time")
 	private int estimatedTime;
 	
-	// Not needed atm
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
+	private Customer customer;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<FeeInProject> feeInProject;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<UserInProject> userInProject;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<Timelog> timelog;
+	
+// Not needed atm
 //	@OneToMany
 //	@JoinColumn(name="project_id") 
 //	private List<Timelog> timelogs;
@@ -68,21 +89,17 @@ public class Project implements Serializable {
 	public void setEstimatedTime(int estimatedTime) {
 		this.estimatedTime = estimatedTime;
 	}
-
-//	public List<Timelog> getTimelogs() {
-//		return timelogs;
-//	}
-//
-//	public void setTimelogs(List<Timelog> timelogs) {
-//		this.timelogs = timelogs;
-//	}
 	
-//	private boolean active;
-//	private int customerId;
-//	private Set<Customer> customer;
-//	private Set<FeeInProject> feeInProject;
-//	private Set<UserInProject> userInProject;
-
+	public List<FeeInProject> getFeeInProject() {
+		return this.feeInProject;
+	}
 	
-
+	public List<UserInProject> getUserInProject() {
+		return this.userInProject;
+	}
+	
+	public List<Timelog> getTimelog() {
+		return this.timelog;
+	}
+	
 }

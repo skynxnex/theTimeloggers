@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2011 2:35:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <subclass name="se.kyh.ad10.timeloggers.server.engine.PublicInterfaceImpl" extends="se.kyh.ad10.timeloggersPublic.server.PublicInterface"
+    discriminator-value="PublicInterfaceImpl" lazy="false">
+        <property name="uuid" type="java.util.UUID" access="field">
+            <column name="UUID" />
+        </property>
+    </subclass>
+</hibernate-mapping>

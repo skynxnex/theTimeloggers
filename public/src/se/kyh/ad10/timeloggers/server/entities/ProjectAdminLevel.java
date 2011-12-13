@@ -1,10 +1,15 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,7 +27,9 @@ public class ProjectAdminLevel {
 	@Column(name = "name")
 	private String name;
 	
-//	private Set<UserInProject> userInProject;
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_in_project")
+	private List<UserInProject> userInProject;
 
 	public int getId() {
 		return this.id;
@@ -36,13 +43,6 @@ public class ProjectAdminLevel {
 		return this.name;
 	}
 
-//	public Set<UserInProject> getUserInProject() {
-//		if (this.userInProject == null) {
-//			this.userInProject = new HashSet<UserInProject>();
-//		}
-//		return this.userInProject;
-//	}
-
 	public void setId(int value) {
 		this.id = value;
 	}
@@ -54,5 +54,8 @@ public class ProjectAdminLevel {
 	public void setName(String value) {
 		this.name = value;
 	}
-
+	
+	public List<UserInProject> getUserInProject() {
+		return this.userInProject;
+	}
 }

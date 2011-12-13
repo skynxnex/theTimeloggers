@@ -1,11 +1,16 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -23,46 +28,44 @@ public class Customer implements Serializable {
 	
 	@Column(name = "active")
 	private boolean active;
-	
-//	private Set<CustomerInfo> customerInfo;
-//	private Set<Project> project;
-	
-//	public Set<CustomerInfo> getCustomerInfo() {
-//		if (this.customerInfo == null) {
-//			this.customerInfo = new HashSet<CustomerInfo>();
-//		}
-//		return this.customerInfo;
-//	}
 
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<CustomerInfo> customerInfo;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<Project> project;
+	
 	public int getId() {
-		return this.id;
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
-//	public Set<Project> getProject() {
-//		if (this.project == null) {
-//			this.project = new HashSet<Project>();
-//		}
-//		return this.project;
-//	}
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public boolean isActive() {
-		return this.active;
+		return active;
 	}
 
-	public void setActive(boolean value) {
-		this.active = value;
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+	
+	public List<CustomerInfo> getCustomerInfo() {
+		return this.customerInfo;
 	}
 
-	public void setId(int value) {
-		this.id = value;
+	public List<Project> getProject() {
+		return this.project;
 	}
-
-	public void setName(String value) {
-		this.name = value;
-	}
-
 }

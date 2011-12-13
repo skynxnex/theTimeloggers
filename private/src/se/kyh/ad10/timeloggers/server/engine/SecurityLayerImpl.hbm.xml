@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2011 2:35:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl" table="SECURITYLAYERIMPL">
+        <id name="serialVersionUID" type="long" access="field">
+            <column name="SERIALVERSIONUID" />
+            <generator class="assigned" />
+        </id>
+        <map name="map" table="PUBLICINTERFACE" lazy="true" access="field">
+            <key>
+                <column name="SERIALVERSIONUID" />
+            </key>
+            <map-key type="java.util.UUID"></map-key>
+            <one-to-many class="se.kyh.ad10.timeloggersPublic.server.PublicInterface" />
+        </map>
+    </class>
+</hibernate-mapping>

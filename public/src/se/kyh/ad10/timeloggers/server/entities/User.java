@@ -1,12 +1,19 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
+import java.util.List;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -35,20 +42,21 @@ public class User implements Serializable {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	// @Column(name = "")
-//	private Set<UserInfo> info;
+	@OneToMany(fetch = FetchType.LAZY)
+	@JoinColumn
+	private List<UserInfo> userInfo;
 	
-	// @Column(name = "user_id")
-//	private Set<SystemAdminLevel> systemAdminLevelImpl;
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<SystemAdminLevel> systemAdminLevel;
 	
-//	@Column(name = "user_id")
-//	private Set<UserInfo> userInfo;
+	@OneToMany
+	@JoinColumn
+	private List<UserInProject> userInProject;
 	
-//	@Column(name = "user_id")
-//	private Set<UserInProject> userInProject;
-	
-//	@Column(name = "user_id")
-//	private Set<AttendedTime> userRoleInProjectImpl;
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn
+	private List<AttendedTime> attendedTime;
 	
 	/*---------------------*/
 	
@@ -69,13 +77,6 @@ public class User implements Serializable {
 		return this.id;
 	}
 
-//	public Set<UserInfo> getInfo() {
-//		if (this.info == null) {
-//			this.info = new HashSet<UserInfo>();
-//		}
-//		return this.info;
-//	}
-
 	public String getLastName() {
 		return lastName;
 	}
@@ -87,34 +88,6 @@ public class User implements Serializable {
 	public String getPlainPassword() {
 		return this.plainPassword;
 	}
-
-//	public Set<SystemAdminLevel> getSystemAdminLevelImpl() {
-//		if (this.systemAdminLevelImpl == null) {
-//			this.systemAdminLevelImpl = new HashSet<SystemAdminLevel>();
-//		}
-//		return this.systemAdminLevelImpl;
-//	}
-
-//	public Set<UserInfo> getUserInfo() {
-//		if (this.userInfo == null) {
-//			this.userInfo = new HashSet<UserInfo>();
-//		}
-//		return this.userInfo;
-//	}
-
-//	public Set<UserInProject> getUserInProject() {
-//		if (this.userInProject == null) {
-//			this.userInProject = new HashSet<UserInProject>();
-//		}
-//		return this.userInProject;
-//	}
-
-//	public Set<AttendedTime> getUserRoleInProjectImpl() {
-//		if (this.userRoleInProjectImpl == null) {
-//			this.userRoleInProjectImpl = new HashSet<AttendedTime>();
-//		}
-//		return this.userRoleInProjectImpl;
-//	}
 
 	public void setEmail(String value) {
 		this.email = value;
@@ -139,5 +112,20 @@ public class User implements Serializable {
 	public void setPlainPassword(String value) {
 		this.plainPassword = value;
 	}
+	
+	public List<UserInfo> getUserInfo() {
+		return this.userInfo;
+	}
 
+	public List<SystemAdminLevel> getSystemAdminLevel() {
+		return this.systemAdminLevel;
+	}
+
+	public List<UserInProject> getUserInProject() {
+		return this.userInProject;
+	}
+
+	public List<AttendedTime> getAttendedTime() {
+		return this.attendedTime;
+	}
 }

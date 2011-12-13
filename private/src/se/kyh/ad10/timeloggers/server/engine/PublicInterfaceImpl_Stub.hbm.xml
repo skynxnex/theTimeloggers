@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2011 2:35:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <subclass name="se.kyh.ad10.timeloggers.server.engine.PublicInterfaceImpl_Stub" extends="se.kyh.ad10.timeloggersPublic.server.PublicInterface"
+    discriminator-value="PublicInterfaceImpl_Stub" lazy="false">
+        <property name="serialVersionUID" type="long" access="field">
+            <column name="SERIALVERSIONUID" />
+        </property>
+        <property name="$method_getCustomerDAO_0" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_GETCUSTOMERDAO_0" />
+        </property>
+        <property name="$method_getProjectDAO_1" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_GETPROJECTDAO_1" />
+        </property>
+        <property name="$method_getUserDAO_2" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_GETUSERDAO_2" />
+        </property>
+        <property name="$method_getUserInfoDAO_3" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_GETUSERINFODAO_3" />
+        </property>
+    </subclass>
+</hibernate-mapping>

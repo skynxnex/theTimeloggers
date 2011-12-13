@@ -1,5 +1,7 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -23,75 +25,39 @@ public class FeeInProject {
 	@Column(name = "fee")
 	private int fee;
 	
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "role_id")
-	@Basic(fetch = FetchType.EAGER)
-	private Role role;
-	
-	
+	private List<Role> role;	
 
-	private boolean projectId;
+	private List<Project> project;
 	
-//	private Set<Role> role;
-//	private Set<Project> project;
-//	private Set<AttendedTime> userRoleInProject;
-//	private Set<AttendedTime> userRoleInProject1;
-
-	public int getFee() {
-		return this.fee;
-	}
+	private List<AttendedTime> attendedTime;
 
 	public int getId() {
-		return this.id;
-	}
-	
-	public Role getRole() {
-		return role;
+		return id;
 	}
 
-	public void setRole(Role role) {
-		this.role = role;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-//	public Set<Project> getProject() {
-//		if (this.project == null) {
-//			this.project = new HashSet<Project>();
-//		}
-//		return this.project;
-//	}
-
-
-//	public Set<Role> getRole() {
-//		if (this.role == null) {
-//			this.role = new HashSet<Role>();
-//		}
-//		return this.role;
-//	}
-
-
-
-//	public Set<AttendedTime> getUserRoleInProject() {
-//		if (this.userRoleInProject == null) {
-//			this.userRoleInProject = new HashSet<AttendedTime>();
-//		}
-//		return this.userRoleInProject;
-//	}
-
-
-	public boolean isProjectId() {
-		return this.projectId;
+	public int getFee() {
+		return fee;
 	}
 
-	public void setFee(int value) {
-		this.fee = value;
+	public void setFee(int fee) {
+		this.fee = fee;
 	}
 
-	public void setId(int value) {
-		this.id = value;
+	public List<Project> getProject() {
+		return this.project;
 	}
 
-	public void setProjectId(boolean value) {
-		this.projectId = value;
+	public List<Role> getRole() {
+		return this.role;
 	}
 
+	public List<AttendedTime> getAttendedTime() {
+		return this.attendedTime;
+	}
 }

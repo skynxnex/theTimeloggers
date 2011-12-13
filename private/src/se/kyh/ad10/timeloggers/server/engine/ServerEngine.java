@@ -8,7 +8,7 @@ import java.rmi.registry.LocateRegistry;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 /**
- * SjŠlva servern dŠr allt snurrar
+ * Sjï¿½lva servern dï¿½r allt snurrar
  */
 
 

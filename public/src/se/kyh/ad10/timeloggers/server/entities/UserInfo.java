@@ -1,5 +1,7 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.util.List;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
@@ -20,68 +22,38 @@ public class UserInfo {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
-	@JoinColumn(name = "info_type_id")
-	@Basic(fetch = FetchType.EAGER)
-	private InfoType infoType;
-	
-	@ManyToOne
-	@JoinColumn(name = "user_id")
-	@Basic(fetch = FetchType.EAGER)
-	private User user;
-	
 	@Column(name = "value")
 	private String value;
 	
-//	private Set<InfoType> infoType;
-//	private Set<User> user;
-
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "info_type_id")
+	private List<InfoType> infoType;
+	
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "user_id")
+	private List<User> user;
+	
 	public int getId() {
-		return this.id;
+		return id;
 	}
 
-//	public Set<InfoType> getInfoType() {
-//		if (this.infoType == null) {
-//			this.infoType = new HashSet<InfoType>();
-//		}
-//		return this.infoType;
-//	}
-
-
-//	public Set<User> getUser() {
-//		if (this.user == null) {
-//			this.user = new HashSet<User>();
-//		}
-//		return this.user;
-//	}
-
-
-
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getValue() {
-		return this.value;
-	}
-
-	public void setId(int value) {
-		this.id = value;
+		return value;
 	}
 
 	public void setValue(String value) {
 		this.value = value;
 	}
 
-	public InfoType getInfoType() {
-		return infoType;
+	public List<InfoType> getInfoType() {
+		return this.infoType;
 	}
-
-	public void setInfoType(InfoType infoType) {
-		this.infoType = infoType;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
+	
+	public List<User> getUser() {
+		return this.user;
 	}
 }

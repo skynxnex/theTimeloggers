@@ -46,7 +46,7 @@ public class TestClient {
 			
 			// Filling up the object
 			Timelog timelog = new Timelog();
-			timelog.setComment("Detta Šr en kommentar");
+			timelog.setComment("Detta ï¿½r en kommentar");
 			timelog.setDuration(60);
 			timelog.setTitle("Timelog 1");
 			timelog.setStart(date);

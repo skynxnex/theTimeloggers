@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Dec 6, 2011 2:35:12 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl_Stub" table="SECURITYLAYERIMPL_STUB">
+        <id name="serialVersionUID" type="long" access="field">
+            <column name="SERIALVERSIONUID" />
+            <generator class="assigned" />
+        </id>
+        <property name="$method_createSession_0" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_CREATESESSION_0" />
+        </property>
+        <property name="$method_getPublicInterface_1" type="java.lang.reflect.Method" access="field">
+            <column name="$METHOD_GETPUBLICINTERFACE_1" />
+        </property>
+    </class>
+</hibernate-mapping>
