@@ -55,9 +55,9 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 		this.session = DB.get().getSessionFactory().openSession();
 	}
 
-	public User doLogin(UUID uuid) {
-
-		return null;
+	public User doLogin(UUID uuid, String email, String password) throws RemoteException {
+		User user = this.getUserDAO().login(email, password);
+		return user;
 	}
 
 	@Override

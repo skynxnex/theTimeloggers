@@ -7,6 +7,8 @@ import java.rmi.RMISecurityManager;
 import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.PopulateDB;
+import se.kyh.ad10.timeloggers.server.entities.User;
+import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 
@@ -31,9 +33,18 @@ public class TestClient {
 			// To get access to PublicInterface we need to use/get an UUID
 			UUID uuid = serverObj.createSession();
 			
-//			PublicInterface pii = serverObj.getPublicInterface(uuid);
+			PublicInterface pii = serverObj.getPublicInterface(uuid);
 			PopulateDB pdb = serverObj.getPublicInterface(uuid).getPopulateDB();
 			pdb.populateDB();
+			
+			User user = pii.doLogin(uuid, "blaha@blaha.se", "testar");
+			
+			if(user == null){
+				System.out.println("Did not work");
+			} else {
+				System.out.println("Works");
+			}
+			
 			
 //			TimeLogDAO tld = pii.getTimelogDAO();
 //			List<Timelog> timelogs = tld.getAllTimeLogsForUser(1);

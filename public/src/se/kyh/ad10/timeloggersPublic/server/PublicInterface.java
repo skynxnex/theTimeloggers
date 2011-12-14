@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggersPublic.server;
 import java.io.Serializable;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
+import java.util.UUID;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.AttendedTimeDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
@@ -18,6 +19,7 @@ import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.UserInfoDAO;
+import se.kyh.ad10.timeloggers.server.entities.User;
 
 public interface PublicInterface extends Remote, Serializable {
 	
@@ -48,5 +50,7 @@ public interface PublicInterface extends Remote, Serializable {
    public UserInProjectDAO getUserInProjectDAO() throws RemoteException;
    
    public PopulateDB getPopulateDB() throws RemoteException;
+   
+   public User doLogin(UUID uuid, String email, String password) throws RemoteException;
    
    }

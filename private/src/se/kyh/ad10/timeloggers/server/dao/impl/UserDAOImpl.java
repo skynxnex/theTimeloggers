@@ -9,6 +9,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
+import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl;
 import se.kyh.ad10.timeloggers.server.entities.Role;
 import se.kyh.ad10.timeloggers.server.entities.User;
@@ -36,8 +37,14 @@ public class UserDAOImpl extends UnicastRemoteObject implements UserDAO {
 
 	@Override
 	public User login(String email, String password) {
-		// TODO Auto-generated method stub
-		return null;
+		Session dbsession = DB.get().getSession();
+		dbsession.beginTransaction();
+		Query query = dbsession.createQuery("from User where email = :email and password = :password");
+		query.setString("email", email);
+		query.setString("password", password);
+		User user = (User) query.uniqueResult();
+		dbsession.getTransaction().commit();
+		return user;
 	}
 
 	@Override
