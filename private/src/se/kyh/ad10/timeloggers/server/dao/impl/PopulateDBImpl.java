@@ -61,7 +61,7 @@ public class PopulateDBImpl extends UnicastRemoteObject implements PopulateDB {
 		uinf.setValue("123456789");
 		
 		dbsession.beginTransaction();
-		dbsession.saveOrUpdate(usr);
+		dbsession.saveOrUpdate(uinf);
 		dbsession.getTransaction().commit();
 		
 		// Customer
@@ -83,7 +83,7 @@ public class PopulateDBImpl extends UnicastRemoteObject implements PopulateDB {
 		prj.setCustomer(cst);
 		
 		dbsession.beginTransaction();
-		dbsession.saveOrUpdate(prj);
+		dbsession.saveOrUpdate(cinf);
 		dbsession.getTransaction().commit();
 		
 		// Role
