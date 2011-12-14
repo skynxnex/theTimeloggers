@@ -6,16 +6,21 @@ import java.util.List;
 import java.util.UUID;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
 import se.kyh.ad10.timeloggers.server.db.DB;
+import se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl;
+import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 import se.kyh.ad10.timeloggers.server.entities.Timelog;
+import se.kyh.ad10.timeloggers.server.entities.User;
 
 @SuppressWarnings("serial")
 public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 	
 	private UUID uuid;
+	private List<Timelog> timelogs;
 
 	public TimeLogDAOImpl(UUID uuid) throws RemoteException {
 		super();
@@ -69,8 +74,20 @@ public class TimeLogDAOImpl extends UnicastRemoteObject implements TimeLogDAO {
 
 	@Override
 	public List<Timelog> getAllTimeLogsForUser(int userId) {
-		
-		return null;
+		Session dbsession = SecurityLayerImpl.getPublicInterfaceImpl(uuid).getSession();
+		dbsession.beginTransaction();
+		Query query = dbsession.createQuery("from User where id = :id");
+		query.setInteger("id", userId);
+		User user = (User) query.uniqueResult();
+		System.out.println(user.getEmail());
+		List<AttendedTime> atts = user.getAttendedTime();
+		for ( AttendedTime att : (List<AttendedTime>) atts ) {
+			for (Timelog tl : att.getTimelog()) {
+				this.timelogs.add(tl);
+			}
+		}
+		dbsession.getTransaction().commit();
+		return this.timelogs;
 	}
 	
 	public List<Timelog> getAllTimelogs() throws RemoteException {

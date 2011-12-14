@@ -1,22 +1,21 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
-import java.util.List;
+import java.io.Serializable;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+@SuppressWarnings("serial")
 @Entity
 @Table(name = "customer_info")
 @Embeddable
-public class CustomerInfo {
+public class CustomerInfo implements Serializable {
 	
 	@Id
 	@GeneratedValue
@@ -25,13 +24,13 @@ public class CustomerInfo {
 	@Column(name = "value")
 	private String value;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn
-	private List<Customer> customer;
+	private Customer customer;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn
-	private List<InfoType> infoType;
+	private InfoType infoType;
 
 	public int getId() {
 		return id;
@@ -49,11 +48,11 @@ public class CustomerInfo {
 		this.value = value;
 	}
 	
-	public List<Customer> getCustomer() {
+	public Customer getCustomer() {
 		return this.customer;
 	}
 
-	public List<InfoType> getInfoTypeImpl() {
+	public InfoType getInfoTypeImpl() {
 		return this.infoType;
 	}
 }

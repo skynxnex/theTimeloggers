@@ -3,10 +3,8 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -24,15 +22,15 @@ public class AttendedTime implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn
-	private List<FeeInProject> feeInProject;
+	private FeeInProject feeInProject;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn
-	private List<User> user;
+	private User user;
 	
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany
 	@JoinColumn
 	private List<Timelog> timelog;
 
@@ -44,15 +42,19 @@ public class AttendedTime implements Serializable {
 		this.id = id;
 	}
 	
-	public List<FeeInProject> getFeeInProject() {
+	public FeeInProject getFeeInProject() {
 		return this.feeInProject;
 	}
 
-	public List<User> getUser() {
+	public User getUser() {
 		return this.user;
 	}
 	
 	public List<Timelog> getTimelog() {
 		return this.timelog;
+	}
+	
+	public void setFeeInProject(FeeInProject fee) {
+		this.feeInProject = fee;
 	}
 }

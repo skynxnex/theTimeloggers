@@ -2,13 +2,10 @@ package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -39,14 +36,12 @@ public class Timelog implements Serializable {
 	private String title;
 
 	@ManyToOne
-	@JoinColumn(name = "project_id")
-	@Basic(fetch = FetchType.EAGER)
-	private List<Project> project;
+	@JoinColumn
+	private Project project;
 
 	@ManyToOne
-	@JoinColumn(name = "attendedtime_id")
-	@Basic(fetch = FetchType.EAGER)
-	private List<AttendedTime> attendedTime;
+	@JoinColumn
+	private AttendedTime attendedTime;
 
 	public int getId() {
 		return id;
@@ -88,11 +83,11 @@ public class Timelog implements Serializable {
 		this.title = title;
 	}
 	
-	public List<Project> getProject() {
+	public Project getProject() {
 		return this.project;
 	}
 	
-	public List<AttendedTime> getAttendedTime() {
+	public AttendedTime getAttendedTime() {
 		return this.attendedTime;
 	}
 	

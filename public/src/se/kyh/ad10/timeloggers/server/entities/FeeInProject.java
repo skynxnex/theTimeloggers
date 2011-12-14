@@ -1,16 +1,16 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -26,12 +26,16 @@ public class FeeInProject implements Serializable {
 	@Column(name = "fee")
 	private int fee;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "role_id")
-	private List<Role> role;	
+	@ManyToOne
+	@JoinColumn
+	private Role role;	
 
-	private List<Project> project;
+	@ManyToOne
+	@JoinColumn
+	private Project project;
 	
+	@OneToMany
+	@JoinColumn
 	private List<AttendedTime> attendedTime;
 
 	public int getId() {
@@ -50,11 +54,11 @@ public class FeeInProject implements Serializable {
 		this.fee = fee;
 	}
 
-	public List<Project> getProject() {
+	public Project getProject() {
 		return this.project;
 	}
 
-	public List<Role> getRole() {
+	public Role getRole() {
 		return this.role;
 	}
 

@@ -3,17 +3,14 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @SuppressWarnings("serial")
@@ -42,19 +39,19 @@ public class User implements Serializable {
 	@Column(name = "last_name")
 	private String lastName;
 	
-	@OneToMany(fetch = FetchType.LAZY)
+	@OneToMany
 	@JoinColumn
 	private List<UserInfo> userInfo;
 	
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne
 	@JoinColumn
-	private List<SystemAdminLevel> systemAdminLevel;
+	private SystemAdminLevel systemAdminLevel;
 	
 	@OneToMany
 	@JoinColumn
 	private List<UserInProject> userInProject;
 	
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany
 	@JoinColumn
 	private List<AttendedTime> attendedTime;
 	
@@ -117,7 +114,7 @@ public class User implements Serializable {
 		return this.userInfo;
 	}
 
-	public List<SystemAdminLevel> getSystemAdminLevel() {
+	public SystemAdminLevel getSystemAdminLevel() {
 		return this.systemAdminLevel;
 	}
 
@@ -128,3 +125,4 @@ public class User implements Serializable {
 	public List<AttendedTime> getAttendedTime() {
 		return this.attendedTime;
 	}
+}

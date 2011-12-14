@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 
 import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
 import se.kyh.ad10.timeloggers.server.entities.Customer;
+import se.kyh.ad10.timeloggers.server.entities.CustomerInfo;
 import se.kyh.ad10.timeloggers.server.entities.FeeInProject;
 import se.kyh.ad10.timeloggers.server.entities.InfoType;
 import se.kyh.ad10.timeloggers.server.entities.Project;
@@ -26,7 +27,7 @@ public class DB {
 	
 	private DB(){
 		File configFile = new File("hibernate.cfg.xml");
-		System.out.println(configFile.getAbsolutePath());
+//		System.out.println(configFile.getAbsolutePath());
     	if( null == sessionFactory){
 	    	
 			sessionFactory = new Configuration()
@@ -42,6 +43,7 @@ public class DB {
 							.addAnnotatedClass(SystemAdminLevel.class)
 							.addAnnotatedClass(Timelog.class)
 							.addAnnotatedClass(UserInProject.class)
+							.addAnnotatedClass(CustomerInfo.class)
 	    					.configure(configFile)
 	    					.buildSessionFactory();
     	}

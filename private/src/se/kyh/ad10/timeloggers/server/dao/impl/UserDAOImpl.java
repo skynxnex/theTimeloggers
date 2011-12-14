@@ -9,7 +9,6 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import se.kyh.ad10.timeloggers.server.dao.intf.UserDAO;
-import se.kyh.ad10.timeloggers.server.db.DB;
 import se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl;
 import se.kyh.ad10.timeloggers.server.entities.Role;
 import se.kyh.ad10.timeloggers.server.entities.User;

@@ -1,11 +1,11 @@
 package se.kyh.ad10.timeloggers.server.entities;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -16,7 +16,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "role")
 @Embeddable
-public class Role {
+public class Role implements Serializable {
 	
 	@Id
 	@GeneratedValue
@@ -25,8 +25,8 @@ public class Role {
 	@Column(name = "name")
 	private String name;
 	
-	@OneToMany(fetch = FetchType.EAGER)
-	@JoinColumn(name = "fee_in_project")
+	@OneToMany
+	@JoinColumn
 	private List<FeeInProject> feeInProject;
 
 	public int getId() {
