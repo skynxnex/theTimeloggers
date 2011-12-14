@@ -4,25 +4,9 @@ import java.io.IOException;
 import java.rmi.Naming;
 import java.rmi.NotBoundException;
 import java.rmi.RMISecurityManager;
-import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
-import se.kyh.ad10.timeloggers.server.dao.impl.PopulateDB;
-import se.kyh.ad10.timeloggers.server.dao.intf.TimeLogDAO;
-import se.kyh.ad10.timeloggers.server.engine.SecurityLayerImpl;
-import se.kyh.ad10.timeloggers.server.engine.Session;
-import se.kyh.ad10.timeloggers.server.entities.AttendedTime;
-import se.kyh.ad10.timeloggers.server.entities.Customer;
-import se.kyh.ad10.timeloggers.server.entities.FeeInProject;
-import se.kyh.ad10.timeloggers.server.entities.Project;
-import se.kyh.ad10.timeloggers.server.entities.ProjectAdminLevel;
-import se.kyh.ad10.timeloggers.server.entities.Role;
-import se.kyh.ad10.timeloggers.server.entities.SystemAdminLevel;
-import se.kyh.ad10.timeloggers.server.entities.Timelog;
-import se.kyh.ad10.timeloggers.server.entities.User;
-import se.kyh.ad10.timeloggers.server.entities.UserInProject;
-import se.kyh.ad10.timeloggersPublic.server.PublicInterface;
+import se.kyh.ad10.timeloggers.server.dao.intf.PopulateDB;
 import se.kyh.ad10.timeloggersPublic.server.SecurityLayer;
 
 
@@ -46,9 +30,10 @@ public class TestClient {
 
 			// To get access to PublicInterface we need to use/get an UUID
 			UUID uuid = serverObj.createSession();
+			
 //			PublicInterface pii = serverObj.getPublicInterface(uuid);
-			PopulateDB pdb = new PopulateDB();
-			pdb.populateDB(uuid);
+			PopulateDB pdb = serverObj.getPublicInterface(uuid).getPopulateDB();
+			pdb.populateDB();
 			
 //			TimeLogDAO tld = pii.getTimelogDAO();
 //			List<Timelog> timelogs = tld.getAllTimeLogsForUser(1);

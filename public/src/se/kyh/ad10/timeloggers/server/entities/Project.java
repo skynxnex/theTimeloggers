@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -34,7 +35,7 @@ public class Project implements Serializable {
 	@Column(name = "estimated_time")
 	private int estimatedTime;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Customer customer;
 	

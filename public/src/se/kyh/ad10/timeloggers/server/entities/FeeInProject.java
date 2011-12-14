@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -26,11 +27,11 @@ public class FeeInProject implements Serializable {
 	@Column(name = "fee")
 	private int fee;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Role role;	
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Project project;
 	
@@ -64,5 +65,13 @@ public class FeeInProject implements Serializable {
 
 	public List<AttendedTime> getAttendedTime() {
 		return this.attendedTime;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
+	}
+
+	public void setRole(Role role) {
+		this.role = role;
 	}
 }

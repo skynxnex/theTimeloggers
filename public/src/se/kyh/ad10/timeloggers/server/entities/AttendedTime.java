@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,11 +23,11 @@ public class AttendedTime implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private FeeInProject feeInProject;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private User user;
 	
@@ -56,5 +57,9 @@ public class AttendedTime implements Serializable {
 	
 	public void setFeeInProject(FeeInProject fee) {
 		this.feeInProject = fee;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 }

@@ -2,6 +2,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 
 import java.io.Serializable;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -24,11 +25,11 @@ public class CustomerInfo implements Serializable {
 	@Column(name = "value")
 	private String value;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Customer customer;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private InfoType infoType;
 
@@ -53,6 +54,18 @@ public class CustomerInfo implements Serializable {
 	}
 
 	public InfoType getInfoTypeImpl() {
-		return this.infoType;
+		return this.getInfoType();
+	}
+
+	public InfoType getInfoType() {
+		return infoType;
+	}
+
+	public void setInfoType(InfoType infoType) {
+		this.infoType = infoType;
+	}
+
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 }

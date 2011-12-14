@@ -11,6 +11,7 @@ import se.kyh.ad10.timeloggers.server.dao.impl.CustomerDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.CustomerInfoDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.FeeInProjectDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.InfoTypeDAOImpl;
+import se.kyh.ad10.timeloggers.server.dao.impl.PopulateDBImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.ProjectDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.ProjetAdminLevelDAOImpl;
 import se.kyh.ad10.timeloggers.server.dao.impl.RoleDAOImpl;
@@ -24,6 +25,7 @@ import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.InfoTypeDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.PopulateDB;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
@@ -151,5 +153,11 @@ public class PublicInterfaceImpl extends UnicastRemoteObject implements PublicIn
 
 	public Session getSession() {
 		return session;
+	}
+
+	@Override
+	public PopulateDB getPopulateDB() throws RemoteException {
+		PopulateDB obj = new PopulateDBImpl(uuid);
+		return obj;
 	}
 }

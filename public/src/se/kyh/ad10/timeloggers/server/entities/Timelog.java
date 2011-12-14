@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -35,11 +36,11 @@ public class Timelog implements Serializable {
 	@Column(name = "title")
 	private String title;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private Project project;
 
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private AttendedTime attendedTime;
 
@@ -89,6 +90,14 @@ public class Timelog implements Serializable {
 	
 	public AttendedTime getAttendedTime() {
 		return this.attendedTime;
+	}
+
+	public void setAttendedTime(AttendedTime attendedTime) {
+		this.attendedTime = attendedTime;
+	}
+
+	public void setProject(Project project) {
+		this.project = project;
 	}
 	
 }

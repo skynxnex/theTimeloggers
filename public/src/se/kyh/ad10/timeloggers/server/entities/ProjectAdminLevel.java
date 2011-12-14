@@ -59,4 +59,8 @@ public class ProjectAdminLevel implements Serializable {
 	public List<UserInProject> getUserInProject() {
 		return this.userInProject;
 	}
+
+	public void setUserInProject(List<UserInProject> userInProject) {
+		this.userInProject = userInProject;
+	}
 }

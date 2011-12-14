@@ -3,6 +3,7 @@ package se.kyh.ad10.timeloggers.server.entities;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 @SuppressWarnings("serial")
 @Entity
@@ -43,7 +45,7 @@ public class User implements Serializable {
 	@JoinColumn
 	private List<UserInfo> userInfo;
 	
-	@ManyToOne
+	@ManyToOne(cascade = CascadeType.ALL)
 	@JoinColumn
 	private SystemAdminLevel systemAdminLevel;
 	
@@ -124,5 +126,9 @@ public class User implements Serializable {
 
 	public List<AttendedTime> getAttendedTime() {
 		return this.attendedTime;
+	}
+
+	public void setSystemAdminLevel(SystemAdminLevel systemAdminLevel) {
+		this.systemAdminLevel = systemAdminLevel;
 	}
 }

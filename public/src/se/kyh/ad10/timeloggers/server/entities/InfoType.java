@@ -60,4 +60,8 @@ public class InfoType implements Serializable {
 	public void setCustomerInfo(List<CustomerInfo> customerInfo) {
 		this.customerInfo = customerInfo;
 	}
+
+	public void setUserInfo(List<UserInfo> userInfo) {
+		this.userInfo = userInfo;
+	}
 }

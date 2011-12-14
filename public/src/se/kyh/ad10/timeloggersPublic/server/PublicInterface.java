@@ -9,6 +9,7 @@ import se.kyh.ad10.timeloggers.server.dao.intf.CustomerDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.CustomerInfoDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.FeeInProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.InfoTypeDAO;
+import se.kyh.ad10.timeloggers.server.dao.intf.PopulateDB;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectAdminLevelDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.ProjectDAO;
 import se.kyh.ad10.timeloggers.server.dao.intf.RoleDAO;
@@ -45,5 +46,7 @@ public interface PublicInterface extends Remote, Serializable {
    public TimeLogDAO getTimelogDAO() throws RemoteException;
    
    public UserInProjectDAO getUserInProjectDAO() throws RemoteException;
+   
+   public PopulateDB getPopulateDB() throws RemoteException;
    
    }
