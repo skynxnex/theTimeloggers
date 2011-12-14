@@ -18,3 +18,4 @@ bin/*
 private/bin/*
 public/bin/*
 theTimeloggersClient/bin/*
+src/hibernate.cfg.xml
